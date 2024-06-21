@@ -1,0 +1,4 @@
+db:
+  user: james
+  password: secret
+  port: 5432
