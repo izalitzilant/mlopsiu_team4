@@ -2,3 +2,4 @@ hydra-core
 scipy
 pandas
 dvc
+pytest
