@@ -3,3 +3,4 @@ scipy
 pandas
 dvc
 pytest
+kaggle

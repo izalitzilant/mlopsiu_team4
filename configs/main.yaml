@@ -2,5 +2,6 @@ defaults:
   - _self_
   - db: mysql
 
-db:
-    user: james
+datasets:
+  - train_dataset_path: /data/train.csv
+  - sampled_dataset_path: /data/
