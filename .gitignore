@@ -162,3 +162,5 @@ cython_debug/
 #.idea/
 data/train.csv
 datastore
+data/samples
+src/outputs
