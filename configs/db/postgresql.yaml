@@ -1,3 +1,0 @@
-driver: psql
-password: secret_psql
-user: jones

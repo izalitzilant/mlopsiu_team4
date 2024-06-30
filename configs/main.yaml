@@ -1,6 +1,3 @@
 defaults:
-  - _self_
-  - db: mysql
-
-db:
-    user: james
+  - kaggle
+  - datasets

@@ -1,0 +1,2 @@
+- `train.csv` contains full raw data
+- `samples/sample.csv` contains 100k rows randomly sampled from initial data

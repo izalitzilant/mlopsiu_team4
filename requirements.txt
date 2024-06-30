@@ -1,4 +1,12 @@
 hydra-core
+scikit-learn
+matplotlib
+seaborn
+numpy
+wordcloud
 scipy
 pandas
 dvc
+pytest
+kaggle
+great-expectations
