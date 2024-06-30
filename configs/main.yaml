@@ -1,12 +1,3 @@
-datasets:
-  train_dataset_path: /data/train.csv
-  sampled_dataset_path: /data/
-  sampled_df_filename: train100K.csv
-  sample_size_n: 100000
-  download_path: ../data/
-  file_name: train.csv
-  sample_output_dir: ../data/samples/
-  sample_filename: sample.csv
-
-kaggle:
-  competition_name: avito-demand-prediction
+defaults:
+  - kaggle
+  - datasets
