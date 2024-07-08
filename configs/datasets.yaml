@@ -1,13 +1,6 @@
 datasets:
-  train_dataset_path: ./data/train.csv
-  sampled_dataset_path: ./data/
-  sampled_df_filename: train100K.csv
-  sample_size_frac: 0.2
-  download_path: ./data/
-  file_name: train.csv
-  sample_output_dir: ./data/samples/
+  sample_size: 10000
   sample_filename: sample.csv
   sample_index_path: ./configs/sample_index.txt
   sample_tag_path: ./configs/sample_tag.txt
-  save_sample_script_path: ./scripts/save_sample.sh
 

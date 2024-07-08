@@ -10,7 +10,7 @@ dvc
 pytest
 kaggle
 great-expectations
-# zenml[server]
+#zenml[server]
 apache-airflow
 feast
 pendulum

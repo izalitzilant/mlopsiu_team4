@@ -5,9 +5,11 @@ import zipfile
 import pandas as pd
 from omegaconf import DictConfig
 
+import logging
+import sys
 
-def download_kaggle_dataset(cfg):
-    print("Downloading Kaggle dataset0")
+def download_kaggle_dataset(cfg, path):
+    print("Downloading Kaggle dataset")
     os.environ['KAGGLE_USERNAME'] = cfg.kaggle.username
     os.environ['KAGGLE_KEY'] = cfg.kaggle.key
     import kaggle
@@ -16,49 +18,42 @@ def download_kaggle_dataset(cfg):
     api.authenticate()
     print(cfg.kaggle.competition_name)
     try:
-        kaggle.api.competition_download_file(cfg.kaggle.competition_name, cfg.datasets.file_name,
-                                             path=cfg.datasets.download_path)
+        kaggle.api.competition_download_file(cfg.kaggle.competition_name, 'train.csv',
+                                             path=path)
         print(f"Dataset for competition '{cfg.kaggle.competition_name}' downloaded successfully!")
     except Exception as e:
         print(f"Error downloading dataset: {e}")
-    for file in os.listdir(cfg.datasets.download_path):
+    for file in os.listdir(path):
         if file.endswith(".zip"):
-            with zipfile.ZipFile(os.path.join(cfg.datasets.download_path, file), 'r') as zip_ref:
-                zip_ref.extractall(cfg.datasets.download_path)
-                os.remove(os.path.join(cfg.datasets.download_path, file))
+            with zipfile.ZipFile(os.path.join(path, file), 'r') as zip_ref:
+                zip_ref.extractall(path)
+                os.remove(os.path.join(path, file))
 
-@hydra.main(config_path="./configs", config_name="main", version_base=None)
+@hydra.main(config_path="../configs", config_name="main", version_base=None)
 def sample_data(cfg: DictConfig = None) -> None:
-    download_kaggle_dataset(cfg)
+    data_path = hydra.utils.to_absolute_path('data')
+    data = pd.read_csv(os.path.join(data_path, 'train.csv'))
 
-    data = pd.read_csv(f'{cfg.datasets.download_path}/{cfg.datasets.file_name}')
+    if not os.path.exists(os.path.join(data_path, 'train.csv')) or cfg.kaggle.force_download:
+        download_kaggle_dataset(cfg, data_path)
 
-    with open(cfg.datasets.sample_index_path, 'r+') as f:
+    sample_index_path = hydra.utils.to_absolute_path(cfg.datasets.sample_index_path)
+    with open(sample_index_path, 'r+') as f:
         # get the sample batch indexes
-        start_idx = int(f.read())
-        end_idx = int(len(data) * cfg.datasets.sample_size_frac) + start_idx
+        idx = int(f.read())
+        start_idx = int(cfg.datasets.sample_size) * idx
+        end_idx = int(cfg.datasets.sample_size) * (idx + 1)
         # check if it is the end of the set
         if end_idx >= len(data):
             end_idx = len(data)
-        sample_data = data.iloc[start_idx: end_idx]
-        # rewrite the index file
-        f.truncate(0)
-        f.seek(0)
-        # reset if the set is ended
-        if end_idx == len(data):
-            end_idx = 0
-        f.write(f'{end_idx}')
+        sample_data = data.iloc[start_idx:end_idx]
 
-    if not os.path.exists(cfg.datasets.sample_output_dir):
-        os.makedirs(cfg.datasets.sample_output_dir)
+    samples_path = os.path.join(data_path, './samples/')
+    if not os.path.exists(samples_path):
+        os.makedirs(samples_path)
 
-    sample_data_path = str(f'{cfg.datasets.sample_output_dir}/{cfg.datasets.sample_filename}')
+    sample_data_path = str(os.path.join(samples_path, cfg.datasets.sample_filename))
     sample_data.to_csv(sample_data_path, index=False)
-
-    with open(cfg.datasets.sample_tag_path, 'r') as f:
-        tag = f.read()
-
-    os.popen(f'sh {cfg.datasets.save_sample_script_path} {cfg.datasets.sample_output_dir} {cfg.datasets.sample_filename} {tag}')
 
     return sample_data
 

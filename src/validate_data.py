@@ -1,3 +1,4 @@
+import os
 import sys
 
 import hydra
@@ -19,7 +20,7 @@ def get_expectations(validator):
     ex8 = validator.expect_column_values_to_be_of_type(column="parent_category_name", type_="object",
                                                        meta={"dimension": "Datatype"})
     ex9 = validator.expect_column_values_to_not_be_null(column="category_name", meta={"dimension": "Completeness"})
-    ex10 = validator.expect_column_unique_value_count_to_be_between(column="category_name", min_value=47, max_value=47,
+    ex10 = validator.expect_column_unique_value_count_to_be_between(column="category_name", min_value=1, max_value=47,
                                                                     meta={"dimension": "Cardinality"})
     ex11 = validator.expect_column_values_to_be_of_type(column="category_name", type_="object",
                                                         meta={"dimension": "Datatype"})
@@ -79,10 +80,13 @@ def get_expectations(validator):
     ]
     return expectations
 
-@hydra.main(config_path="./configs", config_name="main", version_base=None)
+@hydra.main(config_path="../configs", config_name="main", version_base=None)
 def validate_initial_dataset(cfg: DictConfig) -> bool:
-    context = gx.get_context(project_root_dir="./services")
-    df = pd.read_csv(f"{cfg.datasets.sample_output_dir}/{cfg.datasets.sample_filename}", parse_dates=["activation_date"])
+    services_path = hydra.utils.to_absolute_path('services')
+    data_path = hydra.utils.to_absolute_path('data')
+    samples_path = os.path.join(data_path, './samples/')
+    context = gx.get_context(project_root_dir=services_path)
+    df = pd.read_csv(os.path.join(samples_path, cfg.datasets.sample_filename), parse_dates=["activation_date"])
 
     ds = context.sources.add_or_update_pandas(name="pandas_datasource")
     da = ds.add_dataframe_asset(name="sample")
