@@ -1,7 +1,8 @@
 #!/bin/bash
+cd "$PYTHONPATH/.."
 
-TAG=`cat "$PYTHONPATH/../configs/sample_tag.txt"`
-SAMPLE_OUTPUT_DIR="$PYTHONPATH/../data/samples"
+TAG=`cat "./configs/sample_tag.txt"`
+SAMPLE_OUTPUT_DIR="./data/samples"
 SAMPLE_FILENAME="$1"
 SAMPLE_DVC_MSG="Added data version $TAG"
 

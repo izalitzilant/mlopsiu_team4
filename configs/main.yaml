@@ -1,3 +1,6 @@
 defaults:
   - kaggle
   - datasets
+
+paths:
+  root_path: /Users/ildarzalaliev/Desktop/mlops_rep/mlopsiu_team4

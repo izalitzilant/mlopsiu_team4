@@ -31,13 +31,13 @@ def download_kaggle_dataset(cfg, path):
 
 @hydra.main(config_path="../configs", config_name="main", version_base=None)
 def sample_data(cfg: DictConfig = None) -> None:
-    data_path = hydra.utils.to_absolute_path('data')
+    data_path = os.path.join(cfg.paths.root_path, 'data')
     data = pd.read_csv(os.path.join(data_path, 'train.csv'))
 
     if not os.path.exists(os.path.join(data_path, 'train.csv')) or cfg.kaggle.force_download:
         download_kaggle_dataset(cfg, data_path)
 
-    sample_index_path = hydra.utils.to_absolute_path(cfg.datasets.sample_index_path)
+    sample_index_path = os.path.join(cfg.paths.root_path, cfg.datasets.sample_index_path)
     with open(sample_index_path, 'r+') as f:
         # get the sample batch indexes
         idx = int(f.read())

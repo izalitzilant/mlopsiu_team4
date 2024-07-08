@@ -1,3 +1,8 @@
+kaggle:
+  competition_name: avito-demand-prediction
+  key: 47071519a8795c25a32b35a0bfb47ee4
+  username: ildarzalyaliev
+  force_download: false
 datasets:
   sample_size: 10000
   sample_filename: sample.csv

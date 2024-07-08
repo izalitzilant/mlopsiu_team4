@@ -82,8 +82,8 @@ def get_expectations(validator):
 
 @hydra.main(config_path="../configs", config_name="main", version_base=None)
 def validate_initial_dataset(cfg: DictConfig) -> bool:
-    services_path = hydra.utils.to_absolute_path('services')
-    data_path = hydra.utils.to_absolute_path('data')
+    services_path = os.path.join(cfg.paths.root_path, 'services')
+    data_path = os.path.join(cfg.paths.root_path, 'data')
     samples_path = os.path.join(data_path, './samples/')
     context = gx.get_context(project_root_dir=services_path)
     df = pd.read_csv(os.path.join(samples_path, cfg.datasets.sample_filename), parse_dates=["activation_date"])
@@ -123,7 +123,6 @@ def validate_initial_dataset(cfg: DictConfig) -> bool:
         sys.exit(1)
 
     context.build_data_docs()
-    context.open_data_docs()
 
     sys.exit(0)
 
