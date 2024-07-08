@@ -32,15 +32,33 @@ def sample_data(cfg: DictConfig = None) -> None:
     download_kaggle_dataset(cfg)
 
     data = pd.read_csv(f'{cfg.datasets.download_path}/{cfg.datasets.file_name}')
-    sample_data = data.sample(n=cfg.datasets.sample_size_n)
+
+    with open(cfg.datasets.sample_index_path, 'r+') as f:
+        # get the sample batch indexes
+        start_idx = int(f.read())
+        end_idx = int(len(data) * cfg.datasets.sample_size_frac) + start_idx
+        # check if it is the end of the set
+        if end_idx >= len(data):
+            end_idx = len(data)
+        sample_data = data.iloc[start_idx: end_idx]
+        # rewrite the index file
+        f.truncate(0)
+        f.seek(0)
+        # reset if the set is ended
+        if end_idx == len(data):
+            end_idx = 0
+        f.write(f'{end_idx}')
 
     if not os.path.exists(cfg.datasets.sample_output_dir):
         os.makedirs(cfg.datasets.sample_output_dir)
 
     sample_data_path = str(f'{cfg.datasets.sample_output_dir}/{cfg.datasets.sample_filename}')
     sample_data.to_csv(sample_data_path, index=False)
-    os.system(f'dvc add {sample_data_path}')
-    os.system('dvc push')
+
+    with open(cfg.datasets.sample_tag_path, 'r') as f:
+        tag = f.read()
+
+    os.popen(f'sh {cfg.datasets.save_sample_script_path} {cfg.datasets.sample_output_dir} {cfg.datasets.sample_filename} {tag}')
 
 if __name__ == "__main__":
     sample_data()
