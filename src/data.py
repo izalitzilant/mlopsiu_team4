@@ -27,7 +27,7 @@ def download_kaggle_dataset(cfg):
                 zip_ref.extractall(cfg.datasets.download_path)
                 os.remove(os.path.join(cfg.datasets.download_path, file))
 
-@hydra.main(config_path="../configs", config_name="main", version_base=None)
+@hydra.main(config_path="./configs", config_name="main", version_base=None)
 def sample_data(cfg: DictConfig = None) -> None:
     download_kaggle_dataset(cfg)
 
@@ -59,6 +59,8 @@ def sample_data(cfg: DictConfig = None) -> None:
         tag = f.read()
 
     os.popen(f'sh {cfg.datasets.save_sample_script_path} {cfg.datasets.sample_output_dir} {cfg.datasets.sample_filename} {tag}')
+
+    return sample_data
 
 if __name__ == "__main__":
     sample_data()

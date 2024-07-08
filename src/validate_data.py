@@ -79,9 +79,9 @@ def get_expectations(validator):
     ]
     return expectations
 
-@hydra.main(config_path="../configs", config_name="main", version_base=None)
+@hydra.main(config_path="./configs", config_name="main", version_base=None)
 def validate_initial_dataset(cfg: DictConfig) -> bool:
-    context = gx.get_context(project_root_dir="../services")
+    context = gx.get_context(project_root_dir="./services")
     df = pd.read_csv(f"{cfg.datasets.sample_output_dir}/{cfg.datasets.sample_filename}", parse_dates=["activation_date"])
 
     ds = context.sources.add_or_update_pandas(name="pandas_datasource")
