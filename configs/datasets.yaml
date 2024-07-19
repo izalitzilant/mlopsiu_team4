@@ -1,5 +1,6 @@
 datasets:
   sample_size: 10000
   sample_filename: sample.csv
-  sample_index_path: ./configs/sample_index.txt
-  sample_tag_path: ./configs/sample_tag.txt
+  version: '3.2'
+  message: Added sample data for version 3.2
+  remote: localstore
