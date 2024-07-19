@@ -6,7 +6,7 @@ import pandas as pd
 from omegaconf import DictConfig
 import great_expectations as gx
 
-def get_expectations(validator):
+def get_initial_expectations(validator):
     ex1 = validator.expect_column_values_to_not_be_null(column="region", meta={"dimension": "Completeness"})
     ex2 = validator.expect_column_unique_value_count_to_be_between(column="region", min_value=28, max_value=28,
                                                                    meta={"dimension": "Cardinality"})
@@ -101,13 +101,15 @@ def validate_initial_dataset(cfg: DictConfig) -> bool:
         expectation_suite_name="initial_data_validation"
     )
 
-    expectations = get_expectations(validator)
+    expectations = get_initial_expectations(validator)
 
     for i, expectation in enumerate(expectations):
         print(f"Expectation {i + 1}: {('Success' if expectation['success'] else 'Failed')}")
+        assert expectation["success"], f"Expectation {i + 1} failed"
 
     checkpoint = context.add_or_update_checkpoint(
         name="initial_data_validation_checkpoint",
+        config_version=cfg.datasets.version,
         validations=[
             {
                 "batch_request": batch_request,
@@ -118,13 +120,7 @@ def validate_initial_dataset(cfg: DictConfig) -> bool:
 
     checkpoint_result = checkpoint.run()
 
-    if not checkpoint_result.success:
-        print("Validataion has not succeeded")
-        sys.exit(1)
-
     context.build_data_docs()
-
-    sys.exit(0)
 
 if __name__ == "__main__":
     validate_initial_dataset()

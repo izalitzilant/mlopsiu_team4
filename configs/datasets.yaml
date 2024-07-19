@@ -1,6 +1,6 @@
 datasets:
   sample_size: 10000
   sample_filename: sample.csv
-  version: '3.2'
-  message: Added sample data for version 3.2
+  version: '3.3'
+  message: Added sample data for version 3.3
   remote: localstore

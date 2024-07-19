@@ -3,4 +3,8 @@ defaults:
   - datasets
 
 paths:
-  root_path: /Users/ildarzalaliev/Desktop/mlops_rep/mlopsiu_team4
+  root_path: /mnt/c/mlopsiu_team4
+
+hydra:
+  run:
+    dir: /mnt/c/mlopsiu_team4/outputs

@@ -1,0 +1,13 @@
+kaggle:
+  competition_name: avito-demand-prediction
+  key: 10576be0e111631c0bfe69572c874c2d
+  username: aelosnirian
+  force_download: false
+datasets:
+  sample_size: 10000
+  sample_filename: sample.csv
+  version: '3.3'
+  message: Added sample data for version 3.3
+  remote: localstore
+paths:
+  root_path: /mnt/c/mlopsiu_team4

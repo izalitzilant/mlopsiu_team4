@@ -10,9 +10,9 @@ dvc
 pytest
 kaggle
 great-expectations
-#zenml[server]
-apache-airflow
-feast
+apache-airflow==2.7.3
+zenml[server]
+# feast
 pendulum
 shyaml
 mlflow
@@ -21,3 +21,5 @@ evidently
 Flask
 flask-session2
 psycopg2-binary
+pymystem3
+nltk
