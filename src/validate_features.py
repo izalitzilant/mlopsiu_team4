@@ -53,41 +53,41 @@ def get_features_expectations(validator):
     return expectations
 
 def validate_features(data: pd.DataFrame, version: str):
-    initialize(config_path="../configs", job_name="validate_features", version_base=None)
-    cfg = compose(config_name="main")
-    services_path = os.path.join(cfg.paths.root_path, 'services')
+    with initialize(config_path="../configs", job_name="validate_features", version_base=None):
+        cfg = compose(config_name="main")
+        services_path = os.path.join(cfg.paths.root_path, 'services')
 
-    context = gx.get_context(project_root_dir=services_path)
-    ds = context.sources.add_or_update_pandas(name="pandas_features")
-    da = ds.add_dataframe_asset(name="sample_preprocessed")
+        context = gx.get_context(project_root_dir=services_path)
+        ds = context.sources.add_or_update_pandas(name="pandas_features")
+        da = ds.add_dataframe_asset(name="sample_preprocessed")
 
-    batch_request = da.build_batch_request(dataframe=data)
-    context.add_or_update_expectation_suite("features_data_validation")
+        batch_request = da.build_batch_request(dataframe=data)
+        context.add_or_update_expectation_suite("features_data_validation")
 
-    validator = context.get_validator(
-        batch_request=batch_request,
-        expectation_suite_name="features_data_validation"
-    )
+        validator = context.get_validator(
+            batch_request=batch_request,
+            expectation_suite_name="features_data_validation"
+        )
 
-    expectations = get_features_expectations(validator)
+        expectations = get_features_expectations(validator)
 
-    for i, expectation in enumerate(expectations):
-        print(f"Expectation {i + 1}: {('Success' if expectation['success'] else 'Failed')}")
-        assert expectation["success"], f"Expectation {i + 1} failed"
-    
-    checkpoint = context.add_or_update_checkpoint(
-        name="features_data_validation",
-        config_version=version,
-        validations=[
-            {
-                "batch_request": batch_request, 
-                "expectation_suite_name": "features_data_validation"
-             }
-        ]
-    )
+        for i, expectation in enumerate(expectations):
+            print(f"Expectation {i + 1}: {('Success' if expectation['success'] else 'Failed')}")
+            assert expectation["success"], f"Expectation {i + 1} failed"
+        
+        checkpoint = context.add_or_update_checkpoint(
+            name="features_data_validation",
+            config_version=version,
+            validations=[
+                {
+                    "batch_request": batch_request, 
+                    "expectation_suite_name": "features_data_validation"
+                }
+            ]
+        )
 
-    checkpoint_result = checkpoint.run()
-    if checkpoint_result["success"]:
-        return data
+        checkpoint_result = checkpoint.run()
+        if checkpoint_result["success"]:
+            return data
     return None
 

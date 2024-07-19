@@ -84,18 +84,18 @@ def sample_data(cfg: DictConfig = None) -> None:
     return sample_data
 
 def read_datastore() -> Tuple[pd.DataFrame, str]:
-    initialize(config_path="../configs", job_name="extract_data", version_base=None)
-    cfg = compose(config_name="main")
-    url = dvc.api.get_url(
-        path=os.path.join(cfg.paths.root_path, 'data', 'samples', cfg.datasets.sample_filename),
-        repo=cfg.paths.root_path,
-        rev=str(cfg.datasets.version),
-        remote=cfg.datasets.remote,
-    )
+    with initialize(config_path="../configs", job_name="extract_data", version_base=None):
+        cfg = compose(config_name="main")
+        url = dvc.api.get_url(
+            path=os.path.join('data', 'samples', cfg.datasets.sample_filename),
+            repo=cfg.paths.root_path,
+            rev=str(cfg.datasets.version),
+            remote=cfg.datasets.remote,
+        )
 
-    data = pd.read_csv(url)
+        data = pd.read_csv(url)
 
-    return data, str(cfg.datasets.version)
+        return data, str(cfg.datasets.version)
 
 def preprocess_data(data: pd.DataFrame) -> pd.DataFrame:
     data = data.drop('image', axis=1)
@@ -165,10 +165,11 @@ def preprocess_data(data: pd.DataFrame) -> pd.DataFrame:
         return text
 
     for feature in text_features:
-        tfidf = TfidfVectorizer(max_features=32, max_df=0.95, min_df=0.05)
+        tfidf = TfidfVectorizer(max_features=64, max_df=0.95, min_df=0.05)
         data[feature] = data[feature].apply(preprocess_text)
         tfidf_result = tfidf.fit_transform(data[feature])
-        tfidf_df = pd.DataFrame(tfidf_result.toarray(), columns=tfidf.get_feature_names_out(), index=data.index)
+        col_names = [f"{feature}_{name}" for name in tfidf.get_feature_names_out()]
+        tfidf_df = pd.DataFrame(tfidf_result.toarray(), columns=col_names, index=data.index)
         data = pd.concat([data, tfidf_df], axis=1)
         data = data.drop(feature, axis=1)
 

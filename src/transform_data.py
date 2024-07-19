@@ -6,8 +6,8 @@ import zenml
 from zenml import step, pipeline, ArtifactConfig
 from zenml.client import Client
 
-from src.data import read_datastore, preprocess_data
-from src.validate_features import validate_features
+from data import read_datastore, preprocess_data
+from validate_features import validate_features
 
 @step(enable_cache=False)
 def extract_data() -> Tuple[

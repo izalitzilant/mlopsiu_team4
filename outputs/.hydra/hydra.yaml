@@ -113,7 +113,7 @@ hydra:
     - hydra.mode=RUN
     task: []
   job:
-    name: validate_data
+    name: version_data
     chdir: null
     override_dirname: ''
     id: ???
@@ -129,7 +129,7 @@ hydra:
   runtime:
     version: 1.3.2
     version_base: '1.3'
-    cwd: /tmp/airflowtmpmle_ezfv
+    cwd: /tmp/airflowtmpj1ee304u
     config_sources:
     - path: hydra.conf
       schema: pkg

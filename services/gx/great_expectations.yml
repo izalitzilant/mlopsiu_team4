@@ -103,6 +103,12 @@ fluent_datasources:
       sample:
         type: dataframe
         batch_metadata: {}
+  pandas_features:
+    type: pandas
+    assets:
+      sample_preprocessed:
+        type: dataframe
+        batch_metadata: {}
 notebooks:
 include_rendered_content:
   globally: false
