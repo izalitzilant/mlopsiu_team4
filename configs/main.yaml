@@ -1,3 +1,10 @@
 defaults:
   - kaggle
   - datasets
+
+paths:
+  root_path: /mnt/c/mlopsiu_team4
+
+hydra:
+  run:
+    dir: /mnt/c/mlopsiu_team4/outputs

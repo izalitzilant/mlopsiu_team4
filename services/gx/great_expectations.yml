@@ -100,7 +100,13 @@ fluent_datasources:
   pandas_datasource:
     type: pandas
     assets:
-      train100k:
+      sample:
+        type: dataframe
+        batch_metadata: {}
+  pandas_features:
+    type: pandas
+    assets:
+      sample_preprocessed:
         type: dataframe
         batch_metadata: {}
 notebooks:

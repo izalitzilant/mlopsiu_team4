@@ -1,0 +1,310 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "features_data_validation",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "price"
+      },
+      "meta": {
+        "dimension": "Completeness"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "price",
+        "max_value": 1,
+        "min_value": 0
+      },
+      "meta": {
+        "dimension": "Range"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "price",
+        "type_": "float64"
+      },
+      "meta": {
+        "dimension": "Datatype"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "item_seq_number"
+      },
+      "meta": {
+        "dimension": "Completeness"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "item_seq_number",
+        "max_value": 1,
+        "min_value": 0
+      },
+      "meta": {
+        "dimension": "Range"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "item_seq_number",
+        "type_": "float64"
+      },
+      "meta": {
+        "dimension": "Datatype"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "image_top_1"
+      },
+      "meta": {
+        "dimension": "Completeness"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "image_top_1",
+        "max_value": 1,
+        "min_value": 0
+      },
+      "meta": {
+        "dimension": "Range"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "image_top_1",
+        "type_": "float64"
+      },
+      "meta": {
+        "dimension": "Datatype"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "title_length"
+      },
+      "meta": {
+        "dimension": "Completeness"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "title_length",
+        "max_value": 1,
+        "min_value": 0
+      },
+      "meta": {
+        "dimension": "Range"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "title_length",
+        "type_": "float64"
+      },
+      "meta": {
+        "dimension": "Datatype"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "description_length"
+      },
+      "meta": {
+        "dimension": "Completeness"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "description_length",
+        "max_value": 1,
+        "min_value": 0
+      },
+      "meta": {
+        "dimension": "Range"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "description_length",
+        "type_": "float64"
+      },
+      "meta": {
+        "dimension": "Datatype"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "params_length"
+      },
+      "meta": {
+        "dimension": "Completeness"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "params_length",
+        "max_value": 1,
+        "min_value": 0
+      },
+      "meta": {
+        "dimension": "Range"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "params_length",
+        "type_": "float64"
+      },
+      "meta": {
+        "dimension": "Datatype"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "day_of_week_sin"
+      },
+      "meta": {
+        "dimension": "Completeness"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "day_of_week_sin",
+        "max_value": 1,
+        "min_value": -1
+      },
+      "meta": {
+        "dimension": "Range"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "day_of_week_sin",
+        "type_": "float64"
+      },
+      "meta": {
+        "dimension": "Datatype"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "day_of_week_cos"
+      },
+      "meta": {
+        "dimension": "Completeness"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "day_of_week_cos",
+        "max_value": 1,
+        "min_value": -1
+      },
+      "meta": {
+        "dimension": "Range"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "day_of_week_cos",
+        "type_": "float64"
+      },
+      "meta": {
+        "dimension": "Datatype"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "day_of_month_sin"
+      },
+      "meta": {
+        "dimension": "Completeness"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "day_of_month_sin",
+        "max_value": 1,
+        "min_value": -1
+      },
+      "meta": {
+        "dimension": "Range"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "day_of_month_sin",
+        "type_": "float64"
+      },
+      "meta": {
+        "dimension": "Datatype"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "day_of_month_cos"
+      },
+      "meta": {
+        "dimension": "Completeness"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "day_of_month_cos",
+        "max_value": 1,
+        "min_value": -1
+      },
+      "meta": {
+        "dimension": "Range"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "day_of_month_cos",
+        "type_": "float64"
+      },
+      "meta": {
+        "dimension": "Datatype"
+      }
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.18.19"
+  }
+}

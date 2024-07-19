@@ -1,5 +1,5 @@
 name: initial_data_validation_checkpoint
-config_version: 1.0
+config_version: 3.4
 template_name:
 module_name: great_expectations.checkpoint
 class_name: Checkpoint
@@ -21,7 +21,7 @@ runtime_configuration: {}
 validations:
   - batch_request:
       datasource_name: pandas_datasource
-      data_asset_name: train100k
+      data_asset_name: sample
       options: {}
       batch_slice:
     expectation_suite_name: initial_data_validation

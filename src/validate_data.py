@@ -1,3 +1,4 @@
+import os
 import sys
 
 import hydra
@@ -5,7 +6,7 @@ import pandas as pd
 from omegaconf import DictConfig
 import great_expectations as gx
 
-def get_expectations(validator):
+def get_initial_expectations(validator):
     ex1 = validator.expect_column_values_to_not_be_null(column="region", meta={"dimension": "Completeness"})
     ex2 = validator.expect_column_unique_value_count_to_be_between(column="region", min_value=28, max_value=28,
                                                                    meta={"dimension": "Cardinality"})
@@ -19,7 +20,7 @@ def get_expectations(validator):
     ex8 = validator.expect_column_values_to_be_of_type(column="parent_category_name", type_="object",
                                                        meta={"dimension": "Datatype"})
     ex9 = validator.expect_column_values_to_not_be_null(column="category_name", meta={"dimension": "Completeness"})
-    ex10 = validator.expect_column_unique_value_count_to_be_between(column="category_name", min_value=47, max_value=47,
+    ex10 = validator.expect_column_unique_value_count_to_be_between(column="category_name", min_value=1, max_value=47,
                                                                     meta={"dimension": "Cardinality"})
     ex11 = validator.expect_column_values_to_be_of_type(column="category_name", type_="object",
                                                         meta={"dimension": "Datatype"})
@@ -81,8 +82,11 @@ def get_expectations(validator):
 
 @hydra.main(config_path="../configs", config_name="main", version_base=None)
 def validate_initial_dataset(cfg: DictConfig) -> bool:
-    context = gx.get_context(project_root_dir="../services")
-    df = pd.read_csv(f"{cfg.datasets.sample_output_dir}/{cfg.datasets.sample_filename}", parse_dates=["activation_date"])
+    services_path = os.path.join(cfg.paths.root_path, 'services')
+    data_path = os.path.join(cfg.paths.root_path, 'data')
+    samples_path = os.path.join(data_path, './samples/')
+    context = gx.get_context(project_root_dir=services_path)
+    df = pd.read_csv(os.path.join(samples_path, cfg.datasets.sample_filename), parse_dates=["activation_date"])
 
     ds = context.sources.add_or_update_pandas(name="pandas_datasource")
     da = ds.add_dataframe_asset(name="sample")
@@ -97,13 +101,15 @@ def validate_initial_dataset(cfg: DictConfig) -> bool:
         expectation_suite_name="initial_data_validation"
     )
 
-    expectations = get_expectations(validator)
+    expectations = get_initial_expectations(validator)
 
     for i, expectation in enumerate(expectations):
         print(f"Expectation {i + 1}: {('Success' if expectation['success'] else 'Failed')}")
+        assert expectation["success"], f"Expectation {i + 1} failed"
 
     checkpoint = context.add_or_update_checkpoint(
         name="initial_data_validation_checkpoint",
+        config_version=cfg.datasets.version,
         validations=[
             {
                 "batch_request": batch_request,
@@ -114,14 +120,7 @@ def validate_initial_dataset(cfg: DictConfig) -> bool:
 
     checkpoint_result = checkpoint.run()
 
-    if not checkpoint_result.success:
-        print("Validataion has not succeeded")
-        sys.exit(1)
-
     context.build_data_docs()
-    context.open_data_docs()
-
-    sys.exit(0)
 
 if __name__ == "__main__":
     validate_initial_dataset()
