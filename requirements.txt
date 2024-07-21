@@ -23,3 +23,5 @@ flask-session2
 psycopg2-binary
 pymystem3
 nltk
+skorch
+torch==2.2.0

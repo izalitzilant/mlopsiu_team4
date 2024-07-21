@@ -1,0 +1,6 @@
+name: MLOps_Team4
+
+entry_points:
+
+  main:
+    command: "python src/main.py --multirun"

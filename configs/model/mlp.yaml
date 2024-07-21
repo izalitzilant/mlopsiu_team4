@@ -1,0 +1,19 @@
+model_name: MLP_4
+artifact_path: mlp_model
+
+tag_key: "model"
+tag_value: "MLP"
+
+module_name: "models"
+class_name: "MLP"
+
+params:
+  module__input_size: [-1]
+  module__output_size: [1]  
+  module__hidden1: [32, 64, 128]
+  module__hidden2: [16, 32, 64]
+  module__hidden3: [8, 16, 32]
+  module__seed: [42]
+  max_epochs: [25]
+  optimizer__lr: [0.0005]
+  optimizer__weight_decay: [10.0]

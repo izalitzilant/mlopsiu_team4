@@ -1,10 +1,17 @@
 defaults:
   - kaggle
   - datasets
+  - model/model
+  - experiment
+  - reproducibility
 
 paths:
   root_path: /mnt/c/mlopsiu_team4
 
 hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      +model: "mlp"
   run:
     dir: /mnt/c/mlopsiu_team4/outputs
