@@ -1,4 +1,0 @@
-db:
-  user: jones
-  driver: mysql
-  password: secret_mysql

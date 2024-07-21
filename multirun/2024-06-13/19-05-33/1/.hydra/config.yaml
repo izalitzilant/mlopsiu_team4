@@ -1,4 +1,0 @@
-db:
-  user: jones
-  driver: psql
-  password: secret_psql
