@@ -1,8 +1,8 @@
 datasets:
   sample_size: 10000
   sample_filename: sample.csv
-  version: '4.1'
-  message: Added sample data for version 4.1
+  version: '4.2'
+  message: Added sample data for version 4.2
   remote: localstore
   target_col: deal_probability
   category_name:
