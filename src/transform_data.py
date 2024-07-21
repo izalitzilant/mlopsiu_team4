@@ -15,6 +15,7 @@ def extract_data() -> Tuple[
     Annotated[str, ArtifactConfig(name="data_version", tags=["data_preparation"])]
 ]:
     data, version = read_datastore()
+    print("Dataset version", version, data.shape)
     return data, version
 
 @step(enable_cache=False)
@@ -26,6 +27,8 @@ def validate_data(data: pd.DataFrame, version: str) -> Annotated[pd.DataFrame, A
     return validate_features(data, version)
 
 def load_features(data: pd.DataFrame, version: str) -> None:
+    version = version + 'c'
+    print("Saving preprocessed dataset", version, data.shape)
     zenml.save_artifact(data, "features_target", tags=[version])
 
     client = Client()

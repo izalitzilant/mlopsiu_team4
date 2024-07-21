@@ -1,5 +1,5 @@
 name: initial_data_validation_checkpoint
-config_version: 3.4
+config_version: 3.7
 template_name:
 module_name: great_expectations.checkpoint
 class_name: Checkpoint

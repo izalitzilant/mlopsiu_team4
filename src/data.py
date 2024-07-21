@@ -1,5 +1,7 @@
 import os
 from typing import Tuple
+
+from sklearn.discriminant_analysis import StandardScaler
 import hydra
 from hydra import compose, initialize
 import zipfile
@@ -9,6 +11,7 @@ import pandas as pd
 from omegaconf import DictConfig
 from omegaconf import OmegaConf
 import dvc.api
+from sklearn.decomposition import PCA
 
 import nltk
 from nltk.corpus import stopwords
@@ -98,100 +101,106 @@ def read_datastore() -> Tuple[pd.DataFrame, str]:
         return data, str(cfg.datasets.version)
 
 def preprocess_data(data: pd.DataFrame) -> pd.DataFrame:
-    data = data.drop('image', axis=1)
-    data = data.drop(['item_id', 'user_id'], axis=1)
-    data['activation_date'] = pd.to_datetime(data['activation_date'])
+    with initialize(config_path="../configs", job_name="preprocess_data", version_base=None):
+        cfg = compose(config_name="main")
+        data = data.drop('image', axis=1)
+        data = data.drop(['item_id', 'user_id'], axis=1)
+        data['activation_date'] = pd.to_datetime(data['activation_date'])
 
-    # Imputations
-    data['param_1'] = data['param_1'].fillna('missing')
-    data['param_2'] = data['param_2'].fillna('missing')
-    data['param_3'] = data['param_3'].fillna('missing')
-    data['description'] = data['description'].fillna('Нет описания')
+        # Imputations
+        data['param_1'] = data['param_1'].fillna('missing')
+        data['param_2'] = data['param_2'].fillna('missing')
+        data['param_3'] = data['param_3'].fillna('missing')
 
-    category_price_median = data.groupby('category_name')['price'].median()
-    data['price'] = data['price'].fillna(data['category_name'].map(category_price_median))
+        def params_length(x):
+            if x == 'missing':
+                return 0
+            return len(x)
 
-    max_image_top_1 = data['image_top_1'].max()
-    data['image_top_1'] = data['image_top_1'].fillna(max_image_top_1 + 1)
+        data['params_length'] = data['param_1'].apply(params_length) + data['param_2'].apply(params_length)\
+            + data['param_3'].apply(params_length)
 
-    # Collapse categories
-    top_categories = data['category_name'].value_counts(normalize=True).cumsum()
-    top_categories = top_categories[top_categories <= 0.75].index
-    data['category_name'] = data['category_name'].apply(lambda x: x if x in top_categories else 'Other')
+        data['description'] = data['description'].fillna('Нет описания')
 
-    top_cities = data['city'].value_counts(normalize=True).cumsum()
-    top_cities = top_cities[top_cities <= 0.75].index
-    data['city'] = data['city'].apply(lambda x: x if x in top_cities else 'Other')
+        category_price_median = data.groupby('category_name')['price'].median()
+        data['price'] = data['price'].fillna(data['category_name'].map(category_price_median))
 
-    top_param_1 = data['param_1'].value_counts(normalize=True).cumsum()
-    top_param_1 = top_param_1[top_param_1 <= 0.75].index
-    data['param_1'] = data['param_1'].apply(lambda x: x if x in top_param_1 or x == 'missing' else 'Other')
+        max_image_top_1 = data['image_top_1'].max()
+        data['image_top_1'] = data['image_top_1'].fillna(max_image_top_1 + 1)
 
-    top_param_2 = data['param_2'].value_counts(normalize=True).cumsum()
-    top_param_2 = top_param_2[top_param_2 <= 0.75].index
-    data['param_2'] = data['param_2'].apply(lambda x: x if x in top_param_2 or x == 'missing' else 'Other')
+        # Collapse categories
+        top_categories = cfg.datasets.category_name
+        data['category_name'] = data['category_name'].apply(lambda x: x if x in top_categories else 'Other')
 
-    top_param_3 = data['param_3'].value_counts(normalize=True).cumsum()
-    top_param_3 = top_param_3[top_param_3 <= 0.75].index
-    data['param_3'] = data['param_3'].apply(lambda x: x if x in top_param_3 or x == 'missing' else 'Other')
+        top_cities = cfg.datasets.city
+        data['city'] = data['city'].apply(lambda x: x if x in top_cities else 'Other')
 
-    def params_length(x):
-        if x == 'missing':
-            return 0
-        return len(x)
+        top_param_1 = cfg.datasets.param_1
+        data['param_1'] = data['param_1'].apply(lambda x: x if x in top_param_1 or x == 'missing' else 'Other')
 
-    data['params_length'] = data['param_1'].apply(params_length) + data['param_2'].apply(params_length)\
-          + data['param_3'].apply(params_length)
-    
-    # Categories encoding
-    categorical_cols = ['region', 'category_name', 'city', 'parent_category_name', 'user_type', 'param_1', 'param_2', 'param_3']
-    data = pd.get_dummies(data, columns=categorical_cols, drop_first=True, dtype=int)
+        top_param_2 = cfg.datasets.param_2
+        data['param_2'] = data['param_2'].apply(lambda x: x if x in top_param_2 or x == 'missing' else 'Other')
 
-    data['title_length'] = data['title'].str.len()
-    data['description_length'] = data['description'].str.len()
+        top_param_3 = cfg.datasets.param_3
+        data['param_3'] = data['param_3'].apply(lambda x: x if x in top_param_3 or x == 'missing' else 'Other')
+        
+        # Categories encoding
+        categorical_cols = ['region', 'category_name', 'city', 'parent_category_name', 'user_type', 'param_1', 'param_2', 'param_3']
+        data = pd.get_dummies(data, columns=categorical_cols, drop_first=True, dtype=int)
 
-    # TF-IDF for title and description
-    text_features = ['title', 'description']
-    nltk.download('stopwords')
-    russian_stop_words = set(stopwords.words("russian"))
-    mystem = Mystem()
+        data['title_length'] = data['title'].str.len()
+        data['description_length'] = data['description'].str.len()
 
-    def preprocess_text(text):
-        tokens = mystem.lemmatize(text.lower())
-        tokens = [token for token in tokens if token not in russian_stop_words\
-                  and token != " " \
-                  and token.strip() not in punctuation]
-        text = " ".join(tokens)
-        return text
+        # TF-IDF + PCA for title and description
+        text_features = [('title', 8), ('description', 16)]
+        nltk.download('stopwords')
+        russian_stop_words = set(stopwords.words("russian"))
+        mystem = Mystem()
 
-    for feature in text_features:
-        tfidf = TfidfVectorizer(max_features=64, max_df=0.95, min_df=0.05)
-        data[feature] = data[feature].apply(preprocess_text)
-        tfidf_result = tfidf.fit_transform(data[feature])
-        col_names = [f"{feature}_{name}" for name in tfidf.get_feature_names_out()]
-        tfidf_df = pd.DataFrame(tfidf_result.toarray(), columns=col_names, index=data.index)
-        data = pd.concat([data, tfidf_df], axis=1)
-        data = data.drop(feature, axis=1)
+        def preprocess_text(text):
+            tokens = mystem.lemmatize(text.lower())
+            tokens = [token for token in tokens if token not in russian_stop_words\
+                    and token != " " \
+                    and token.strip() not in punctuation]
+            text = " ".join(tokens)
+            return text
 
-    # Date features
-    def sin_cos_transform(x, max_val):
-        return np.sin(2 * np.pi * x / max_val), np.cos(2 * np.pi * x / max_val)
+        for feature, pca_k in text_features:
+            tfidf = TfidfVectorizer(max_features=128)
+            data[feature] = data[feature].apply(preprocess_text)
+            tfidf_result = tfidf.fit_transform(data[feature])
+            tfidf_df = pd.DataFrame(tfidf_result.toarray(), columns=tfidf.get_feature_names_out(), index=data.index)
+            # PCA
+            pca = PCA(n_components=pca_k)
+            pca_result = pca.fit_transform(tfidf_df)
+            scaler = StandardScaler()
+            pca_result = scaler.fit_transform(pca_result)
+            pca_df = pd.DataFrame(pca_result, columns=[f"{feature}_pca_{i}" for i in range(pca_k)], index=data.index)
+            data = pd.concat([data, pca_df], axis=1)
+            data = data.drop(feature, axis=1)
+
+        # Date features
+        def sin_cos_transform(x, max_val):
+            return np.sin(2 * np.pi * x / max_val), np.cos(2 * np.pi * x / max_val)
 
 
-    day_of_week = data['activation_date'].dt.dayofweek
-    data['day_of_week_sin'], data['day_of_week_cos'] = sin_cos_transform(day_of_week, 7)
+        day_of_week = data['activation_date'].dt.dayofweek
+        data['day_of_week_sin'], data['day_of_week_cos'] = sin_cos_transform(day_of_week, 7)
 
-    day_of_month = data['activation_date'].dt.day
-    data['day_of_month_sin'], data['day_of_month_cos'] = sin_cos_transform(day_of_month, data['activation_date'].dt.days_in_month)
+        day_of_month = data['activation_date'].dt.day
+        data['day_of_month_sin'], data['day_of_month_cos'] = sin_cos_transform(day_of_month, data['activation_date'].dt.days_in_month)
 
-    data = data.drop('activation_date', axis=1)
-    
-    # Scaling
-    scaler = MinMaxScaler()
-    numerical_cols = ['price', 'item_seq_number', 'image_top_1', 'title_length', 'description_length', 'params_length']
-    data[numerical_cols] = scaler.fit_transform(data[numerical_cols])
+        data = data.drop('activation_date', axis=1)
+        
+        # Scaling
+        scaler = StandardScaler()
+        numerical_cols = ['price', 'item_seq_number', 'image_top_1', 'title_length', 'description_length', 'params_length']
+        data[numerical_cols] = scaler.fit_transform(data[numerical_cols])
 
-    return data
+        # Sort columns for consistency
+        data = data.reindex(sorted(data.columns), axis=1)
+
+        return data
     
 if __name__ == "__main__":
     sample_data()

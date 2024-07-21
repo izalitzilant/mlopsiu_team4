@@ -1,6 +1,6 @@
 {
     "type": "zenml.zen_server.deploy.local.local_zen_server.LocalZenServer",
-    "uuid": "98048c79-5baa-48bd-9aab-5699ef910cd5",
+    "uuid": "2d2cb5c4-cb12-4a98-8aff-0272edbc8c10",
     "admin_state": "active",
     "config": {
         "type": "zenml.zen_server.deploy.local.local_zen_server.LocalZenServerConfig",
