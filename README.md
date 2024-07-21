@@ -1,21 +1,24 @@
 # Repository structure
 
-├───README.md          # Repo docs <br> 
-├───.gitignore         # gitignore file <br> 
-├───requirements.txt   # Python packages <br>
-├───configs            # Hydra configuration management <br>
-├───data               # All data <br>
-├───docs               # Project docs like reports or figures <br>
-├───models             # ML models <br>
-├───notebooks          # Jupyter notebooks <br>
-├───outputs            # Outputs of Hydra <br>
-├───pipelines          # A Soft link to DAGs of Apache Airflow <br>
-├───reports            # Generated reports <br> 
-├───scripts            # Shell scripts (.sh) <br>
-├───services           # Metadata of services (PostgreSQL, Feast, Apache airflow, ...etc) <br>
-├───sql                # SQL files <br>
-├───src                # Python scripts <br>
-└───tests              # Scripts for testing Python code <br>
+| File/Directory        | Description                                               |
+|-----------------------|-----------------------------------------------------------|
+| `README.md`           | Repo docs                                                 |
+| `.gitignore`          | Gitignore file                                            |
+| `requirements.txt`    | Python packages                                           |
+| `configs`             | Hydra configuration management                            |
+| `data`                | All data                                                  |
+| `docs`                | Project docs like reports or figures                      |
+| `models`              | ML models                                                 |
+| `notebooks`           | Jupyter notebooks                                         |
+| `outputs`             | Outputs of Hydra                                          |
+| `pipelines`           | A Soft link to DAGs of Apache Airflow                     |
+| `reports`             | Generated reports                                         |
+| `scripts`             | Shell scripts (.sh)                                       |
+| `services`            | Metadata of services (PostgreSQL, Feast, Apache Airflow, etc.) |
+| `sql`                 | SQL files                                                 |
+| `src`                 | Python scripts                                            |
+| `tests`               | Scripts for testing Python code                           |
+
 
 # How to run the pipeline
 
