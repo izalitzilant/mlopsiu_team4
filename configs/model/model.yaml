@@ -8,6 +8,8 @@ cv_evaluation_metric: "mean_test_neg_mean_absolute_error"
 
 pyfunc_predict_fn: "predict"
 
+num_challengers: 5
+
 metrics:
   rmse: "neg_root_mean_squared_error"
   mae: "neg_mean_absolute_error"

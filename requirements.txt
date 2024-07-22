@@ -16,7 +16,7 @@ zenml[server]
 pendulum
 shyaml
 mlflow
-# giskard
+giskard==2.0.0
 evidently
 Flask
 flask-session2
@@ -25,3 +25,4 @@ pymystem3
 nltk
 skorch
 torch==2.2.0
+gradio
