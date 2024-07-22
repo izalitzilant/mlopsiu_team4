@@ -1,3 +1,4 @@
+import mlflow
 import hydra
 from hydra import compose, initialize
 import os
@@ -43,6 +44,25 @@ def dup():
     
     print("\nDF 3.5", df2.shape)
     print(df2.iloc[:5, :5])
+
+def get_model_version(model_name, model_alias):
+    client = mlflow.MlflowClient()
+    if model_alias is not None:
+        model_version = client.get_model_version_by_alias(model_name, model_alias).version
+        print(model_version)
+
+    #model_version = f'{model_version}'
+    model_uri = f"models:/{model_name}/{model_version}"
+    model = mlflow.sklearn.load_model(model_uri=model_uri)
+
+    print(model)
+
+@hydra.main(config_path="../configs", config_name="main", version_base=None)
+def main(cfg: DictConfig):
+    print(cfg)
+    print(cfg.kek)
     
 if __name__ == '__main__':
-    dup()
+    main()
+    #get_model_version("MLP_4", "challenger1")
+    #dup()
