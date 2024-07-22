@@ -5,6 +5,7 @@ import random
 import mlflow
 import numpy as np
 import pandas as pd
+from sklearn.base import BaseEstimator, RegressorMixin
 from zenml.client import Client
 import torch
 from skorch.callbacks import BatchScoring
@@ -12,7 +13,7 @@ from skorch.regressor import NeuralNetRegressor
 from sklearn.model_selection import GridSearchCV
 import matplotlib.pyplot as plt
 
-from models import RMSELoss
+from models import RMSELoss, WrappedNeuralNetRegressor
 
 def load_features(name, version, target_col):
     client = Client()
@@ -58,8 +59,8 @@ def train(X_train, y_train, cfg):
 
     class_instance = getattr(importlib.import_module(cfg.model.module_name), cfg.model.class_name)
     optimizer = torch.optim.AdamW
-    estimator = NeuralNetRegressor(module=class_instance, optimizer=optimizer, verbose=0, 
-                                   criterion=RMSELoss, batch_size=512)
+    estimator = WrappedNeuralNetRegressor(module=class_instance, optimizer=optimizer, verbose=0, 
+                                          criterion=RMSELoss, batch_size=512)
 
     param_grid = dict(cfg.model.params)
 
@@ -76,9 +77,6 @@ def train(X_train, y_train, cfg):
         verbose=1,
         return_train_score=True,
     )
-
-    X_train = X_train.values.astype(np.float32)
-    y_train = y_train.values.astype(np.float32).reshape(-1, 1)
 
     gs.fit(X_train, y_train)
 
@@ -160,10 +158,7 @@ def log_metadata(cfg, gs, X_train, y_train, X_test, y_test):
         mlflow.set_tag(cfg.model.tag_key, cfg.model.tag_value)
 
         # Infer the model signature
-        X_train_np = X_train.values.astype(np.float32)
-        y_train_np = y_train.values.astype(np.float32).reshape(-1, 1)
-        X_test_np = X_test.values.astype(np.float32)
-        signature = mlflow.models.infer_signature(X_train, gs.predict(X_train_np))
+        signature = mlflow.models.infer_signature(X_train, gs.predict(X_train))
 
         # Log the model
         model_info = mlflow.sklearn.log_model(
@@ -173,6 +168,7 @@ def log_metadata(cfg, gs, X_train, y_train, X_test, y_test):
             input_example=X_train.iloc[0].to_numpy(),
             registered_model_name=cfg.model.model_name,
             pyfunc_predict_fn=cfg.model.pyfunc_predict_fn,
+            code_paths=["src/models.py"],
         )
 
         client = mlflow.client.MlflowClient()
@@ -184,7 +180,7 @@ def log_metadata(cfg, gs, X_train, y_train, X_test, y_test):
         )
 
         # Evaluate the best model
-        predictions = gs.best_estimator_.predict(X_test_np)  # type: ignore
+        predictions = gs.best_estimator_.predict(X_test)  # type: ignore
         eval_data = pd.DataFrame(y_test)
         eval_data.columns = ["label"]
         eval_data["predictions"] = predictions
@@ -197,6 +193,7 @@ def log_metadata(cfg, gs, X_train, y_train, X_test, y_test):
             evaluators=["default"],
         )
 
+        
         mlflow.log_metrics(results.metrics)
 
         print(f"Best model metrics:\n{results.metrics}")
@@ -230,12 +227,12 @@ def log_metadata(cfg, gs, X_train, y_train, X_test, y_test):
                 )
 
                 optimizer = torch.optim.AdamW
-                estimator = NeuralNetRegressor(
+                estimator = WrappedNeuralNetRegressor(
                     module=class_instance, optimizer=optimizer, 
                     criterion=RMSELoss, batch_size=512, **ps
                 )
 
-                estimator.fit(X_train_np, y_train_np)
+                estimator.fit(X_train, y_train)
 
                 plot_loss(estimator, f'run{index}_loss', cfg, child_run)
                 
@@ -250,15 +247,15 @@ def log_metadata(cfg, gs, X_train, y_train, X_test, y_test):
                 if child_run.info.artifact_uri:
                     print("Downloading run artifacts")
                     try:
-                        path = os.path.join(cfg.paths.root_path, 'results', f'{cfg.model.model_name}_{child_run.info.run_id}_{str(index)}')
-                        os.mkdir(path)
+                        path = os.path.join(cfg.paths.root_path, 'results', 'runs', f'{cfg.model.model_name}_{child_run.info.run_id}_{str(index)}')
+                        os.makedirs(path, exist_ok=True)
                         mlflow.artifacts.download_artifacts(artifact_uri=child_run.info.artifact_uri, 
                                                             dst_path=path)
                     except:
                         print('Download failed!')
 
                 signature = mlflow.models.infer_signature(
-                    X_train, estimator.predict(X_train_np)
+                    X_train, estimator.predict(X_train)
                 )
 
                 model_info = mlflow.sklearn.log_model(
@@ -268,13 +265,14 @@ def log_metadata(cfg, gs, X_train, y_train, X_test, y_test):
                     input_example=X_train.iloc[0].to_numpy(),
                     registered_model_name=cfg.model.model_name,
                     pyfunc_predict_fn=cfg.model.pyfunc_predict_fn,
+                    code_paths=["src/models.py"]
                 )
 
 
                 model_uri = model_info.model_uri
                 loaded_model = mlflow.sklearn.load_model(model_uri=model_uri)
 
-                predictions = loaded_model.predict(X_test_np)  # type: ignore
+                predictions = loaded_model.predict(X_test)  # type: ignore
 
                 eval_data = pd.DataFrame(y_test)
                 eval_data.columns = ["label"]

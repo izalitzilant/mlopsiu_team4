@@ -1,9 +1,9 @@
-experiment_name: "mlops_exp_2"
+experiment_name: "mlops_exp_3"
 run_name: "multi_run"
 
 test_size: 0.2
 random_state: 42
 cv_n_jobs: -1
 
-train_data_version: '3.4c'
-test_data_version: '3.5c'
+train_data_version: '4.1c'
+test_data_version: '4.2c'

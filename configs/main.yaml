@@ -12,6 +12,6 @@ hydra:
   mode: MULTIRUN
   sweeper:
     params:
-      +model: "mlp"
+      +model: "resnet"
   run:
     dir: /mnt/c/mlopsiu_team4/outputs
