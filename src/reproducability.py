@@ -18,12 +18,10 @@ import sklearn
 from model import load_features, train
 
 def evaluate_model(gs, X_test, y_test, metrics_fns):
-    X_test_np = X_test.values.astype(np.float32)
-    y_test_np = y_test.values.astype(np.float32).reshape(-1, 1)
-    predictions = gs.best_estimator_.predict(X_test_np)
+    predictions = gs.best_estimator_.predict(X_test)
     metrics = {}
     for metric_name, metric_fn in metrics_fns.items():
-        metrics[metric_name] = metric_fn(y_test_np, predictions)
+        metrics[metric_name] = metric_fn(y_test, predictions)
     
     return metrics
 
