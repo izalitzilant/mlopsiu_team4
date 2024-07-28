@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/325322830e7f4f5fa9ea79b0b2ced16c/artifacts
+deleted_time: 1722188940327
+end_time: 1721489798736
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 325322830e7f4f5fa9ea79b0b2ced16c
+run_name: overjoyed-perch-267
+run_uuid: 325322830e7f4f5fa9ea79b0b2ced16c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721488959645
+status: 3
+tags: []
+user_id: threeteck

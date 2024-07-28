@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/17247f122eda4546ae3365481ca9486c/artifacts
+deleted_time: 1722188940551
+end_time: 1721399229558
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 17247f122eda4546ae3365481ca9486c
+run_name: fortunate-pig-742
+run_uuid: 17247f122eda4546ae3365481ca9486c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721399223910
+status: 4
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/3fa729a0ace34abdbceb039f4afea37f/artifacts
+deleted_time: 1722188940051
+end_time: 1721588078218
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 3fa729a0ace34abdbceb039f4afea37f
+run_name: adaptable-fox-823
+run_uuid: 3fa729a0ace34abdbceb039f4afea37f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721588050169
+status: 4
+tags: []
+user_id: threeteck

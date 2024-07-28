@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/eae23ef5cdc8440ebf6d10511af95492/artifacts
+deleted_time: 1722188939702
+end_time: 1721597419787
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: eae23ef5cdc8440ebf6d10511af95492
+run_name: adaptable-croc-615
+run_uuid: eae23ef5cdc8440ebf6d10511af95492
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721597411958
+status: 4
+tags: []
+user_id: threeteck

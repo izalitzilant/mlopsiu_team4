@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1721605749707
+current_stage: None
+description: null
+last_updated_timestamp: 1721605749707
+name: ResNet
+run_id: 64d3d3fad2554005b07ea90197d4f10c
+run_link: null
+source: file:///mnt/c/mlopsiu_team4/mlruns/935815379554470675/64d3d3fad2554005b07ea90197d4f10c/artifacts/resnet_model
+status: READY
+status_message: null
+storage_location: file:///mnt/c/mlopsiu_team4/mlruns/935815379554470675/64d3d3fad2554005b07ea90197d4f10c/artifacts/resnet_model
+user_id: null
+version: 16

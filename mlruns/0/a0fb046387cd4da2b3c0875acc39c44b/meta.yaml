@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/a0fb046387cd4da2b3c0875acc39c44b/artifacts
+deleted_time: 1722188940145
+end_time: 1721583868424
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: a0fb046387cd4da2b3c0875acc39c44b
+run_name: suave-carp-44
+run_uuid: a0fb046387cd4da2b3c0875acc39c44b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721583798919
+status: 4
+tags: []
+user_id: threeteck

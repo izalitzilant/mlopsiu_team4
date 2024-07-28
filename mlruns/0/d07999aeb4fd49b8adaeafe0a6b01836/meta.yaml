@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/d07999aeb4fd49b8adaeafe0a6b01836/artifacts
+deleted_time: 1722188940016
+end_time: 1721589017945
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: d07999aeb4fd49b8adaeafe0a6b01836
+run_name: magnificent-dove-812
+run_uuid: d07999aeb4fd49b8adaeafe0a6b01836
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721588955021
+status: 3
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/04c3b9c1eec0495582e14ac6fdd61053/artifacts
+deleted_time: 1722188939924
+end_time: 1721591900354
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 04c3b9c1eec0495582e14ac6fdd61053
+run_name: caring-jay-856
+run_uuid: 04c3b9c1eec0495582e14ac6fdd61053
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721591890505
+status: 4
+tags: []
+user_id: threeteck

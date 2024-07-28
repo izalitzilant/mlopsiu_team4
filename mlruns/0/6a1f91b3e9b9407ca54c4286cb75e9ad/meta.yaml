@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/6a1f91b3e9b9407ca54c4286cb75e9ad/artifacts
+deleted_time: 1722188939670
+end_time: 1721598469003
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 6a1f91b3e9b9407ca54c4286cb75e9ad
+run_name: flawless-snail-728
+run_uuid: 6a1f91b3e9b9407ca54c4286cb75e9ad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721598460460
+status: 4
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/e5411a319b43490ba73f0cf94251911e/artifacts
+deleted_time: 1722188939764
+end_time: 1721595830715
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: e5411a319b43490ba73f0cf94251911e
+run_name: victorious-roo-704
+run_uuid: e5411a319b43490ba73f0cf94251911e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721595675187
+status: 3
+tags: []
+user_id: threeteck

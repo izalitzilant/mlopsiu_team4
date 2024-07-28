@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/624a5630975743328b429cc27ba03869/artifacts
+deleted_time: 1722188939669
+end_time: 1721598539547
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 624a5630975743328b429cc27ba03869
+run_name: sneaky-mare-801
+run_uuid: 624a5630975743328b429cc27ba03869
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721598530921
+status: 4
+tags: []
+user_id: threeteck

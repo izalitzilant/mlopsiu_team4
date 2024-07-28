@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/87159585d2494153bc0dd2dd99033cda/artifacts
+deleted_time: 1722188940172
+end_time: 1721580847661
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 87159585d2494153bc0dd2dd99033cda
+run_name: mysterious-yak-679
+run_uuid: 87159585d2494153bc0dd2dd99033cda
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721580229889
+status: 4
+tags: []
+user_id: threeteck

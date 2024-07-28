@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/5c28f69c24644c2c925d4c3bd93b6104/artifacts
+deleted_time: 1722188940205
+end_time: 1721574952910
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 5c28f69c24644c2c925d4c3bd93b6104
+run_name: carefree-finch-7
+run_uuid: 5c28f69c24644c2c925d4c3bd93b6104
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721574739511
+status: 4
+tags: []
+user_id: threeteck

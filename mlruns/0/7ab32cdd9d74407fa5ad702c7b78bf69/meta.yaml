@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/7ab32cdd9d74407fa5ad702c7b78bf69/artifacts
+deleted_time: 1722188940049
+end_time: 1721588380318
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 7ab32cdd9d74407fa5ad702c7b78bf69
+run_name: awesome-snake-837
+run_uuid: 7ab32cdd9d74407fa5ad702c7b78bf69
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721588368234
+status: 4
+tags: []
+user_id: threeteck

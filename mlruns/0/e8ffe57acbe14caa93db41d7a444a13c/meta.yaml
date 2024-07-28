@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/e8ffe57acbe14caa93db41d7a444a13c/artifacts
+deleted_time: 1722188940390
+end_time: 1721476751103
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: e8ffe57acbe14caa93db41d7a444a13c
+run_name: aged-calf-59
+run_uuid: e8ffe57acbe14caa93db41d7a444a13c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721476473423
+status: 4
+tags: []
+user_id: threeteck

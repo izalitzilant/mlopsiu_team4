@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/1961fa3955a64c98ac5810b75aa5f730/artifacts
+deleted_time: 1722188940202
+end_time: 1721575685470
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 1961fa3955a64c98ac5810b75aa5f730
+run_name: nebulous-moose-462
+run_uuid: 1961fa3955a64c98ac5810b75aa5f730
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721575474766
+status: 3
+tags: []
+user_id: threeteck

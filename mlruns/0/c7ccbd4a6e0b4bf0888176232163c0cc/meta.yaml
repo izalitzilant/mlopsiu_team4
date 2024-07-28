@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/c7ccbd4a6e0b4bf0888176232163c0cc/artifacts
+deleted_time: 1722188940551
+end_time: 1721399343705
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: c7ccbd4a6e0b4bf0888176232163c0cc
+run_name: painted-stoat-489
+run_uuid: c7ccbd4a6e0b4bf0888176232163c0cc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721399337612
+status: 4
+tags: []
+user_id: threeteck

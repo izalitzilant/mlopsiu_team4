@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/ec41081cdafc43e9b09fcc8601a70e95/artifacts
+deleted_time: 1722188940050
+end_time: 1721587803471
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: ec41081cdafc43e9b09fcc8601a70e95
+run_name: whimsical-steed-810
+run_uuid: ec41081cdafc43e9b09fcc8601a70e95
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721587668294
+status: 4
+tags: []
+user_id: threeteck

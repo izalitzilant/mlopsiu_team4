@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/335c8c28edd249d1b93f19777b2827ae/artifacts
+deleted_time: 1722188940268
+end_time: 1721573841045
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 335c8c28edd249d1b93f19777b2827ae
+run_name: monumental-pig-955
+run_uuid: 335c8c28edd249d1b93f19777b2827ae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721573837963
+status: 4
+tags: []
+user_id: threeteck

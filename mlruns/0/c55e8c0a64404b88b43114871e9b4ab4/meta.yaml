@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/c55e8c0a64404b88b43114871e9b4ab4/artifacts
+deleted_time: 1722188940018
+end_time: 1721588499491
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: c55e8c0a64404b88b43114871e9b4ab4
+run_name: stylish-swan-13
+run_uuid: c55e8c0a64404b88b43114871e9b4ab4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721588487641
+status: 4
+tags: []
+user_id: threeteck

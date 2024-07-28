@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/6b1c875626e34b9bb0549277b70afa9e/artifacts
+deleted_time: 1722188939638
+end_time: 1721599167109
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 6b1c875626e34b9bb0549277b70afa9e
+run_name: thundering-loon-544
+run_uuid: 6b1c875626e34b9bb0549277b70afa9e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721599159291
+status: 3
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/fe82ac694c59488b8cf0680906daef2e/artifacts
+deleted_time: 1722188940172
+end_time: 1721579972583
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: fe82ac694c59488b8cf0680906daef2e
+run_name: overjoyed-dog-171
+run_uuid: fe82ac694c59488b8cf0680906daef2e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721578945233
+status: 4
+tags: []
+user_id: threeteck

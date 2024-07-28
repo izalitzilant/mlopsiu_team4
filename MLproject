@@ -14,7 +14,7 @@ entry_points:
 
   validate:
     parameters:
-      data_version: {type: string, default: "3.5c"}
+      data_version: {type: string, default: "4.2c"}
       model_name: {type: string, default: "MLP_4"}
       model_alias: {type: string, default: ""}
       model_version: {type: int, default: 2}

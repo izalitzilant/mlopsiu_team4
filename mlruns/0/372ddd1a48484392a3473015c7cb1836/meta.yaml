@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/372ddd1a48484392a3473015c7cb1836/artifacts
+deleted_time: 1722188939573
+end_time: 1721836713958
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 372ddd1a48484392a3473015c7cb1836
+run_name: silent-ox-478
+run_uuid: 372ddd1a48484392a3473015c7cb1836
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721831769136
+status: 3
+tags: []
+user_id: threeteck

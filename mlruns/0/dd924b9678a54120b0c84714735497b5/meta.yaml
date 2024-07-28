@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/dd924b9678a54120b0c84714735497b5/artifacts
+deleted_time: 1722188940083
+end_time: 1721587294309
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: dd924b9678a54120b0c84714735497b5
+run_name: redolent-flea-212
+run_uuid: dd924b9678a54120b0c84714735497b5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721587169006
+status: 4
+tags: []
+user_id: threeteck

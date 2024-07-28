@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/9dfdcc4f17e94e2c8472851b56dd3559/artifacts
+deleted_time: 1722188940360
+end_time: 1721488435817
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 9dfdcc4f17e94e2c8472851b56dd3559
+run_name: casual-midge-598
+run_uuid: 9dfdcc4f17e94e2c8472851b56dd3559
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721488330579
+status: 4
+tags: []
+user_id: threeteck

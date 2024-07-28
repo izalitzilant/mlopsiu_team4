@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/cba8ccbe49ed4e99810ad86abe3edbae/artifacts
+deleted_time: 1722188940111
+end_time: 1721586747934
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: cba8ccbe49ed4e99810ad86abe3edbae
+run_name: sneaky-panda-21
+run_uuid: cba8ccbe49ed4e99810ad86abe3edbae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721586737567
+status: 4
+tags: []
+user_id: threeteck

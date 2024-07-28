@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/bee564ef77eb46af8ce3abec667509ac/artifacts
+deleted_time: 1722188939832
+end_time: 1721593994892
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: bee564ef77eb46af8ce3abec667509ac
+run_name: lyrical-duck-640
+run_uuid: bee564ef77eb46af8ce3abec667509ac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721593985065
+status: 4
+tags: []
+user_id: threeteck

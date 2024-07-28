@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/bf91f51351a14d96bef0a59ed02be12f/artifacts
+deleted_time: 1722188940357
+end_time: 1721488590040
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: bf91f51351a14d96bef0a59ed02be12f
+run_name: upset-frog-513
+run_uuid: bf91f51351a14d96bef0a59ed02be12f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721488567790
+status: 4
+tags: []
+user_id: threeteck

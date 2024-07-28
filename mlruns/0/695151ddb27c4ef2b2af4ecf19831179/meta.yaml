@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/695151ddb27c4ef2b2af4ecf19831179/artifacts
+deleted_time: 1722188939864
+end_time: 1721592967621
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 695151ddb27c4ef2b2af4ecf19831179
+run_name: suave-midge-954
+run_uuid: 695151ddb27c4ef2b2af4ecf19831179
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721592905012
+status: 3
+tags: []
+user_id: threeteck

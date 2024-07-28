@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/1b5fe79d0fc842b9a9f87e54f758de78/artifacts
+deleted_time: 1722188939955
+end_time: 1721590205406
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 1b5fe79d0fc842b9a9f87e54f758de78
+run_name: salty-gnat-1000
+run_uuid: 1b5fe79d0fc842b9a9f87e54f758de78
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721590194851
+status: 3
+tags: []
+user_id: threeteck

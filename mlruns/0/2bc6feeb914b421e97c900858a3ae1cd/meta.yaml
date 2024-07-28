@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/2bc6feeb914b421e97c900858a3ae1cd/artifacts
+deleted_time: 1722188940359
+end_time: 1721487989077
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 2bc6feeb914b421e97c900858a3ae1cd
+run_name: sassy-sheep-215
+run_uuid: 2bc6feeb914b421e97c900858a3ae1cd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721487603088
+status: 3
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/2b786bce24d64a5a9276c62fb3b4fc72/artifacts
+deleted_time: 1722188939607
+end_time: 1721607272035
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 2b786bce24d64a5a9276c62fb3b4fc72
+run_name: wise-owl-408
+run_uuid: 2b786bce24d64a5a9276c62fb3b4fc72
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721607267001
+status: 4
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/3014f39f22af4f71b2b337752727f99d/artifacts
+deleted_time: 1722188939958
+end_time: 1721590067228
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 3014f39f22af4f71b2b337752727f99d
+run_name: languid-crow-655
+run_uuid: 3014f39f22af4f71b2b337752727f99d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721590059237
+status: 4
+tags: []
+user_id: threeteck

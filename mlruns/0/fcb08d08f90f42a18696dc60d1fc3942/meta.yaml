@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/fcb08d08f90f42a18696dc60d1fc3942/artifacts
+deleted_time: 1722188940329
+end_time: 1721488836150
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: fcb08d08f90f42a18696dc60d1fc3942
+run_name: invincible-shrew-262
+run_uuid: fcb08d08f90f42a18696dc60d1fc3942
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721488818193
+status: 4
+tags: []
+user_id: threeteck

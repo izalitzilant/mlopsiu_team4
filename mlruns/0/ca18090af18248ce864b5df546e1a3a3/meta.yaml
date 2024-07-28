@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/ca18090af18248ce864b5df546e1a3a3/artifacts
+deleted_time: 1722188939609
+end_time: 1721605247091
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: ca18090af18248ce864b5df546e1a3a3
+run_name: intrigued-hen-539
+run_uuid: ca18090af18248ce864b5df546e1a3a3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721604586366
+status: 3
+tags: []
+user_id: threeteck

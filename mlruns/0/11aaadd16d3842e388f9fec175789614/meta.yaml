@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/11aaadd16d3842e388f9fec175789614/artifacts
+deleted_time: 1722188939731
+end_time: 1721597357284
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 11aaadd16d3842e388f9fec175789614
+run_name: funny-squid-421
+run_uuid: 11aaadd16d3842e388f9fec175789614
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721597343984
+status: 4
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/70f5530adbc34ae29c3c0b1083e704e8/artifacts
+deleted_time: 1722188940205
+end_time: 1721575224707
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 70f5530adbc34ae29c3c0b1083e704e8
+run_name: sneaky-lamb-140
+run_uuid: 70f5530adbc34ae29c3c0b1083e704e8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721575014237
+status: 3
+tags: []
+user_id: threeteck

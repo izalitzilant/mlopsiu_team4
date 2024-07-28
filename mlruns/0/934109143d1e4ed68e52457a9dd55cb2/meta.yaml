@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/934109143d1e4ed68e52457a9dd55cb2/artifacts
+deleted_time: 1722188940421
+end_time: 1721476107954
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 934109143d1e4ed68e52457a9dd55cb2
+run_name: big-robin-869
+run_uuid: 934109143d1e4ed68e52457a9dd55cb2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721475736741
+status: 4
+tags: []
+user_id: threeteck

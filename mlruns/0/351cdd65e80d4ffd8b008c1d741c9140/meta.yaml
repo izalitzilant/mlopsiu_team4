@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/351cdd65e80d4ffd8b008c1d741c9140/artifacts
+deleted_time: 1722188939573
+end_time: 1721831761226
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 351cdd65e80d4ffd8b008c1d741c9140
+run_name: dapper-crane-909
+run_uuid: 351cdd65e80d4ffd8b008c1d741c9140
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721830020421
+status: 4
+tags: []
+user_id: threeteck

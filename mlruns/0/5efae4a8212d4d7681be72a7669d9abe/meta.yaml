@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/5efae4a8212d4d7681be72a7669d9abe/artifacts
+deleted_time: 1722188940329
+end_time: 1721488923591
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 5efae4a8212d4d7681be72a7669d9abe
+run_name: adorable-ant-926
+run_uuid: 5efae4a8212d4d7681be72a7669d9abe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721488912177
+status: 4
+tags: []
+user_id: threeteck

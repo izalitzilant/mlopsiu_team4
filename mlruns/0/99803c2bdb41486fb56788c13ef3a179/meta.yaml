@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/99803c2bdb41486fb56788c13ef3a179/artifacts
+deleted_time: 1722188940173
+end_time: 1721577594497
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 99803c2bdb41486fb56788c13ef3a179
+run_name: delicate-stoat-471
+run_uuid: 99803c2bdb41486fb56788c13ef3a179
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721577586199
+status: 4
+tags: []
+user_id: threeteck

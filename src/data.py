@@ -51,7 +51,6 @@ def parse_version(version):
     major, minor = int(major), int(minor)
     return major, minor
 
-@hydra.main(config_path="../configs", config_name="main", version_base=None)
 def sample_data_local(cfg: DictConfig = None) -> None:
     data_path = os.path.join(cfg.paths.root_path, 'data')
     samples_path = os.path.join(data_path, './samples/')

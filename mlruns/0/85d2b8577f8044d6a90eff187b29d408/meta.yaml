@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/85d2b8577f8044d6a90eff187b29d408/artifacts
+deleted_time: 1722188939926
+end_time: 1721590321740
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 85d2b8577f8044d6a90eff187b29d408
+run_name: rare-stag-698
+run_uuid: 85d2b8577f8044d6a90eff187b29d408
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721590320943
+status: 4
+tags: []
+user_id: threeteck

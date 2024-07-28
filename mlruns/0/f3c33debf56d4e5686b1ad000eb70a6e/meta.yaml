@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/f3c33debf56d4e5686b1ad000eb70a6e/artifacts
+deleted_time: 1722188940518
+end_time: 1721399436642
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: f3c33debf56d4e5686b1ad000eb70a6e
+run_name: monumental-bass-167
+run_uuid: f3c33debf56d4e5686b1ad000eb70a6e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721399429657
+status: 4
+tags: []
+user_id: threeteck

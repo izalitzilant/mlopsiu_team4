@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/f4fc3183d5ac40b3907df7b32c41c249/artifacts
+deleted_time: 1722188939609
+end_time: 1721606899887
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: f4fc3183d5ac40b3907df7b32c41c249
+run_name: upbeat-moose-365
+run_uuid: f4fc3183d5ac40b3907df7b32c41c249
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721605288985
+status: 3
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/4836fe8cf444434d82f9761ea3ee3fb4/artifacts
+deleted_time: 1722188940419
+end_time: 1721476158787
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 4836fe8cf444434d82f9761ea3ee3fb4
+run_name: aged-robin-897
+run_uuid: 4836fe8cf444434d82f9761ea3ee3fb4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721476123957
+status: 4
+tags: []
+user_id: threeteck

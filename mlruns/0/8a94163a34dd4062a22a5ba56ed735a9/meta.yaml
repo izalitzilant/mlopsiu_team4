@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/8a94163a34dd4062a22a5ba56ed735a9/artifacts
+deleted_time: 1722188940297
+end_time: 1721573668432
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 8a94163a34dd4062a22a5ba56ed735a9
+run_name: invincible-ant-250
+run_uuid: 8a94163a34dd4062a22a5ba56ed735a9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721573657065
+status: 3
+tags: []
+user_id: threeteck

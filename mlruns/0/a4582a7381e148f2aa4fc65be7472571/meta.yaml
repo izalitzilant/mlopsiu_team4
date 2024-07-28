@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/a4582a7381e148f2aa4fc65be7472571/artifacts
+deleted_time: 1722188940111
+end_time: 1721586658234
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: a4582a7381e148f2aa4fc65be7472571
+run_name: enchanting-ant-568
+run_uuid: a4582a7381e148f2aa4fc65be7472571
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721586644932
+status: 4
+tags: []
+user_id: threeteck

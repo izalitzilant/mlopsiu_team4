@@ -1,0 +1,15 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/935815379554470675/c4a1a0a454634e0d9830e37ceb57f81f/artifacts
+end_time: 1721605486606
+entry_point_name: ''
+experiment_id: '935815379554470675'
+lifecycle_stage: active
+run_id: c4a1a0a454634e0d9830e37ceb57f81f
+run_name: child_multi_run_ResNet_neg_root_mean_squared_error_-0_1679311587311024_3
+run_uuid: c4a1a0a454634e0d9830e37ceb57f81f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721605465543
+status: 3
+tags: []
+user_id: threeteck

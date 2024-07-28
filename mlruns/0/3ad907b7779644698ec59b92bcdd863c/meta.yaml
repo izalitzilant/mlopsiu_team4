@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/3ad907b7779644698ec59b92bcdd863c/artifacts
+deleted_time: 1722188940018
+end_time: 1721588833177
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 3ad907b7779644698ec59b92bcdd863c
+run_name: stylish-fawn-308
+run_uuid: 3ad907b7779644698ec59b92bcdd863c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721588809608
+status: 4
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/138be10b0a2f47dcb79351ee0a6b125d/artifacts
+deleted_time: 1722188940142
+end_time: 1721585009688
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 138be10b0a2f47dcb79351ee0a6b125d
+run_name: resilient-fowl-848
+run_uuid: 138be10b0a2f47dcb79351ee0a6b125d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721584689137
+status: 4
+tags: []
+user_id: threeteck

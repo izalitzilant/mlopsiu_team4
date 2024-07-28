@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/fb3ddb12f7614bafb3e75b6e7f5d6405/artifacts
+deleted_time: 1722188939894
+end_time: 1721592581816
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: fb3ddb12f7614bafb3e75b6e7f5d6405
+run_name: unruly-snipe-551
+run_uuid: fb3ddb12f7614bafb3e75b6e7f5d6405
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721592535445
+status: 3
+tags: []
+user_id: threeteck

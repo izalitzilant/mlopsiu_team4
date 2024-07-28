@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/e173d4b48c334ef48e8ad10d6c638344/artifacts
+deleted_time: 1722188939638
+end_time: 1721599048520
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: e173d4b48c334ef48e8ad10d6c638344
+run_name: carefree-smelt-382
+run_uuid: e173d4b48c334ef48e8ad10d6c638344
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721599040576
+status: 4
+tags: []
+user_id: threeteck

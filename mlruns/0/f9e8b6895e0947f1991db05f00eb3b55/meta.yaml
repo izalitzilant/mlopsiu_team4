@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/f9e8b6895e0947f1991db05f00eb3b55/artifacts
+deleted_time: 1722188939893
+end_time: 1721592747267
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: f9e8b6895e0947f1991db05f00eb3b55
+run_name: charming-sponge-615
+run_uuid: f9e8b6895e0947f1991db05f00eb3b55
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721592744624
+status: 4
+tags: []
+user_id: threeteck

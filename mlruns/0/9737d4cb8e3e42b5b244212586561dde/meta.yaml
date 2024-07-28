@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/9737d4cb8e3e42b5b244212586561dde/artifacts
+deleted_time: 1722188940298
+end_time: 1721573569328
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 9737d4cb8e3e42b5b244212586561dde
+run_name: big-hog-347
+run_uuid: 9737d4cb8e3e42b5b244212586561dde
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721573561147
+status: 4
+tags: []
+user_id: threeteck

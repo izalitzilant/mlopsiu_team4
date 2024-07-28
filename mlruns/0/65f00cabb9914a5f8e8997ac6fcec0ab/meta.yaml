@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/65f00cabb9914a5f8e8997ac6fcec0ab/artifacts
+deleted_time: 1722188940519
+end_time: 1721399498781
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 65f00cabb9914a5f8e8997ac6fcec0ab
+run_name: shivering-hen-714
+run_uuid: 65f00cabb9914a5f8e8997ac6fcec0ab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721399492082
+status: 4
+tags: []
+user_id: threeteck

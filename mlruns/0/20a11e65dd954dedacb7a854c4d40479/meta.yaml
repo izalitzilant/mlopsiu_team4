@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/20a11e65dd954dedacb7a854c4d40479/artifacts
+deleted_time: 1722188939700
+end_time: 1721597540357
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 20a11e65dd954dedacb7a854c4d40479
+run_name: bittersweet-gnu-231
+run_uuid: 20a11e65dd954dedacb7a854c4d40479
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721597532451
+status: 4
+tags: []
+user_id: threeteck

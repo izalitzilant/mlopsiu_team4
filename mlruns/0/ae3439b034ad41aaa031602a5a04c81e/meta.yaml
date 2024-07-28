@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/ae3439b034ad41aaa031602a5a04c81e/artifacts
+deleted_time: 1722188940519
+end_time: 1721399600131
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: ae3439b034ad41aaa031602a5a04c81e
+run_name: righteous-goose-595
+run_uuid: ae3439b034ad41aaa031602a5a04c81e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721399592735
+status: 4
+tags: []
+user_id: threeteck

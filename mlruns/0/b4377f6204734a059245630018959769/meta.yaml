@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/b4377f6204734a059245630018959769/artifacts
+deleted_time: 1722188940174
+end_time: 1721578419541
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: b4377f6204734a059245630018959769
+run_name: blushing-yak-148
+run_uuid: b4377f6204734a059245630018959769
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721577961757
+status: 4
+tags: []
+user_id: threeteck

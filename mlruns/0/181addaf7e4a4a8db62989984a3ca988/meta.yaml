@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/181addaf7e4a4a8db62989984a3ca988/artifacts
+deleted_time: 1722188939830
+end_time: 1721594937578
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 181addaf7e4a4a8db62989984a3ca988
+run_name: learned-stork-452
+run_uuid: 181addaf7e4a4a8db62989984a3ca988
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721594896721
+status: 3
+tags: []
+user_id: threeteck

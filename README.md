@@ -1,3 +1,6 @@
+![Test code workflow](https://github.com/izalitzilant/mlopsiu_team4/actions/workflows/test-code.yaml/badge.svg)
+![Validate model workflow](https://github.com/izalitzilant/mlopsiu_team4/actions/workflows/validate-model.yaml/badge.svg)
+
 # Repository structure
 
 | File/Directory        | Description                                               |
@@ -29,7 +32,11 @@
     bash ./scripts/install_requirements.sh
     ```
 
-2. Follow [README](./configs/README.md) in ./configs and setup the kaggle.yaml
+2. Setup config by running `scripts/prepare_env.py` with your kaggle key and username:
+
+    ```shell
+    python scripts/prepare_env.py ++kaggle_key="your key" ++kaggle_username="your username"
+    ```
 
 3. Run `test_data.sh`:
    ```shell

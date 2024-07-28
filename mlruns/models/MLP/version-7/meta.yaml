@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1721604743310
+current_stage: None
+description: null
+last_updated_timestamp: 1721604743310
+name: MLP
+run_id: 5d9092c4b5434bfabcd7de88060dd408
+run_link: null
+source: file:///mnt/c/mlopsiu_team4/mlruns/949748790603708211/5d9092c4b5434bfabcd7de88060dd408/artifacts/mlp_model
+status: READY
+status_message: null
+storage_location: file:///mnt/c/mlopsiu_team4/mlruns/949748790603708211/5d9092c4b5434bfabcd7de88060dd408/artifacts/mlp_model
+user_id: null
+version: 7

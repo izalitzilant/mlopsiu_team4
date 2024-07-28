@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/61c997c8396940fa958505c444c90f27/artifacts
+deleted_time: 1722188939955
+end_time: 1721590142721
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 61c997c8396940fa958505c444c90f27
+run_name: honorable-steed-953
+run_uuid: 61c997c8396940fa958505c444c90f27
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721590134743
+status: 4
+tags: []
+user_id: threeteck

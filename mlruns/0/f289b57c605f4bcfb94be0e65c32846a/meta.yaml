@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/f289b57c605f4bcfb94be0e65c32846a/artifacts
+deleted_time: 1722188939986
+end_time: 1721589926439
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: f289b57c605f4bcfb94be0e65c32846a
+run_name: charming-hound-891
+run_uuid: f289b57c605f4bcfb94be0e65c32846a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721589918082
+status: 4
+tags: []
+user_id: threeteck

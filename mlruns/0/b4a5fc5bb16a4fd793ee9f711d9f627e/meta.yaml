@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/b4a5fc5bb16a4fd793ee9f711d9f627e/artifacts
+deleted_time: 1722188940550
+end_time: 1721399302806
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: b4a5fc5bb16a4fd793ee9f711d9f627e
+run_name: bold-skunk-348
+run_uuid: b4a5fc5bb16a4fd793ee9f711d9f627e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721399296615
+status: 4
+tags: []
+user_id: threeteck

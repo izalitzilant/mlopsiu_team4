@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/0d0f2d1a81a9440a99df795b01c00134/artifacts
+deleted_time: 1722188940112
+end_time: 1721586516794
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 0d0f2d1a81a9440a99df795b01c00134
+run_name: fearless-bass-155
+run_uuid: 0d0f2d1a81a9440a99df795b01c00134
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721586167850
+status: 4
+tags: []
+user_id: threeteck

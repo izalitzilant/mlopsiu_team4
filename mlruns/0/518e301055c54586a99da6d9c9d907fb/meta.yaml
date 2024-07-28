@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/518e301055c54586a99da6d9c9d907fb/artifacts
+deleted_time: 1722188940450
+end_time: 1721402557570
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 518e301055c54586a99da6d9c9d907fb
+run_name: abrasive-robin-9
+run_uuid: 518e301055c54586a99da6d9c9d907fb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721402057624
+status: 3
+tags: []
+user_id: threeteck

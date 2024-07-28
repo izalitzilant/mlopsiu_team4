@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/780f6bbe8c274e969070a5283276845b/artifacts
+deleted_time: 1722188939641
+end_time: 1721598722378
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 780f6bbe8c274e969070a5283276845b
+run_name: enchanting-goose-497
+run_uuid: 780f6bbe8c274e969070a5283276845b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721598713892
+status: 4
+tags: []
+user_id: threeteck

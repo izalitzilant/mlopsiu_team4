@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/2d15fcdb08664b4cb3b6bfe4c99ff8ce/artifacts
+deleted_time: 1722188939700
+end_time: 1721597502279
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 2d15fcdb08664b4cb3b6bfe4c99ff8ce
+run_name: overjoyed-stoat-951
+run_uuid: 2d15fcdb08664b4cb3b6bfe4c99ff8ce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721597494525
+status: 4
+tags: []
+user_id: threeteck

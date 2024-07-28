@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/e5f978a5793b4fbdbf0a4785cec0efba/artifacts
+deleted_time: 1722188939672
+end_time: 1721598029398
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: e5f978a5793b4fbdbf0a4785cec0efba
+run_name: languid-ray-748
+run_uuid: e5f978a5793b4fbdbf0a4785cec0efba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721598020926
+status: 4
+tags: []
+user_id: threeteck

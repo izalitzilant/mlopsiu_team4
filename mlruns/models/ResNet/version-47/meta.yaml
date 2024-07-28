@@ -1,0 +1,15 @@
+aliases:
+- challenger0
+creation_timestamp: 1721606801093
+current_stage: Production
+description: null
+last_updated_timestamp: 1721607637637
+name: ResNet
+run_id: c5fcd492c7f64656aa949e958914c587
+run_link: null
+source: file:///mnt/c/mlopsiu_team4/mlruns/935815379554470675/c5fcd492c7f64656aa949e958914c587/artifacts/resnet_model
+status: READY
+status_message: null
+storage_location: file:///mnt/c/mlopsiu_team4/mlruns/935815379554470675/c5fcd492c7f64656aa949e958914c587/artifacts/resnet_model
+user_id: null
+version: 47

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/364ba2bae6f04b6fbf667738123a1d5b/artifacts
+deleted_time: 1722188940142
+end_time: 1721585160756
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 364ba2bae6f04b6fbf667738123a1d5b
+run_name: learned-zebra-585
+run_uuid: 364ba2bae6f04b6fbf667738123a1d5b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721585014289
+status: 4
+tags: []
+user_id: threeteck

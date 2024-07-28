@@ -22,9 +22,6 @@ def main(cfg: DictConfig):
     kaggle_key = cfg.kaggle_key
     kaggle_username = cfg.kaggle_username
 
-    shutil.copyfile(os.path.join(new_root_path, 'configs', 'kaggle.yaml.sample'),
-                    os.path.join(new_root_path, 'configs', 'kaggle.yaml'))
-
     kaggle_conf = OmegaConf.load(os.path.join(new_root_path, 'configs', 'kaggle.yaml'))
     OmegaConf.update(kaggle_conf, 'kaggle.key', kaggle_key)
     OmegaConf.update(kaggle_conf, 'kaggle.username', kaggle_username)

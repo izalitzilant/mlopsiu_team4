@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/668b6e716e8b40d2979f18c8305ac828/artifacts
+deleted_time: 1722188940358
+end_time: 1721488646076
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 668b6e716e8b40d2979f18c8305ac828
+run_name: unique-hare-106
+run_uuid: 668b6e716e8b40d2979f18c8305ac828
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721488609299
+status: 4
+tags: []
+user_id: threeteck

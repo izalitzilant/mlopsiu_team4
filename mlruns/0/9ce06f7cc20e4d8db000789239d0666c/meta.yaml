@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/9ce06f7cc20e4d8db000789239d0666c/artifacts
+deleted_time: 1722188939924
+end_time: 1721590339114
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 9ce06f7cc20e4d8db000789239d0666c
+run_name: delightful-newt-399
+run_uuid: 9ce06f7cc20e4d8db000789239d0666c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721590331192
+status: 3
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/fae33119207248b3a453da0c158c223b/artifacts
+deleted_time: 1722188939795
+end_time: 1721595642172
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: fae33119207248b3a453da0c158c223b
+run_name: defiant-gull-42
+run_uuid: fae33119207248b3a453da0c158c223b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721595577050
+status: 3
+tags: []
+user_id: threeteck

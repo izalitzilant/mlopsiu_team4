@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/58bb92e9ca8246178d9972d8abd92747/artifacts
+deleted_time: 1722188939762
+end_time: 1721595934583
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 58bb92e9ca8246178d9972d8abd92747
+run_name: rogue-worm-980
+run_uuid: 58bb92e9ca8246178d9972d8abd92747
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721595882366
+status: 3
+tags: []
+user_id: threeteck

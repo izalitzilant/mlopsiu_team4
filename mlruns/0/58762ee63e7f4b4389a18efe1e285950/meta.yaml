@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/58762ee63e7f4b4389a18efe1e285950/artifacts
+deleted_time: 1722188940450
+end_time: 1721475514506
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 58762ee63e7f4b4389a18efe1e285950
+run_name: glamorous-lark-618
+run_uuid: 58762ee63e7f4b4389a18efe1e285950
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721475508532
+status: 4
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/91a6eea553b145d3a206ab2ce46088ea/artifacts
+deleted_time: 1722188939893
+end_time: 1721592773616
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 91a6eea553b145d3a206ab2ce46088ea
+run_name: bemused-mink-635
+run_uuid: 91a6eea553b145d3a206ab2ce46088ea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721592765413
+status: 3
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/f73e03d4e3fb431c8e2c7c46a8e0adeb/artifacts
+deleted_time: 1722188939988
+end_time: 1721589735982
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: f73e03d4e3fb431c8e2c7c46a8e0adeb
+run_name: powerful-elk-765
+run_uuid: f73e03d4e3fb431c8e2c7c46a8e0adeb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721589187142
+status: 3
+tags: []
+user_id: threeteck

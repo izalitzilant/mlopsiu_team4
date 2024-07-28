@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/5445a5062e9f43b7bd4d477be53e6cc7/artifacts
+deleted_time: 1722188940482
+end_time: 1721401155840
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 5445a5062e9f43b7bd4d477be53e6cc7
+run_name: grandiose-stag-971
+run_uuid: 5445a5062e9f43b7bd4d477be53e6cc7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721401069169
+status: 4
+tags: []
+user_id: threeteck

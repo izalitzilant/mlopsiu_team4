@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/8dadf8e3e6174a6fbc2cddbe40334519/artifacts
+deleted_time: 1722188940113
+end_time: 1721585257788
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 8dadf8e3e6174a6fbc2cddbe40334519
+run_name: puzzled-bat-179
+run_uuid: 8dadf8e3e6174a6fbc2cddbe40334519
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721585206862
+status: 4
+tags: []
+user_id: threeteck

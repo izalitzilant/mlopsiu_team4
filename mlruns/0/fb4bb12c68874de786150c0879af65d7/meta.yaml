@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/fb4bb12c68874de786150c0879af65d7/artifacts
+deleted_time: 1722188940390
+end_time: 1721476418658
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: fb4bb12c68874de786150c0879af65d7
+run_name: resilient-cub-760
+run_uuid: fb4bb12c68874de786150c0879af65d7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721476407240
+status: 4
+tags: []
+user_id: threeteck

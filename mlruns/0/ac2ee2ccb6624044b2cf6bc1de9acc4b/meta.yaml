@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/ac2ee2ccb6624044b2cf6bc1de9acc4b/artifacts
+deleted_time: 1722188939762
+end_time: 1721595980694
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: ac2ee2ccb6624044b2cf6bc1de9acc4b
+run_name: bustling-crab-763
+run_uuid: ac2ee2ccb6624044b2cf6bc1de9acc4b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721595941981
+status: 3
+tags: []
+user_id: threeteck

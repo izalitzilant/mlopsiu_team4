@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/d7502fb04e7f46a3ba9f890dc4f57575/artifacts
+deleted_time: 1722188939641
+end_time: 1721598806351
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: d7502fb04e7f46a3ba9f890dc4f57575
+run_name: unruly-gnu-90
+run_uuid: d7502fb04e7f46a3ba9f890dc4f57575
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721598798547
+status: 4
+tags: []
+user_id: threeteck

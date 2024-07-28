@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/da237119bcfd4fcf9ace130a65622bcd/artifacts
+deleted_time: 1722188939573
+end_time: 1721827677765
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: da237119bcfd4fcf9ace130a65622bcd
+run_name: debonair-zebra-118
+run_uuid: da237119bcfd4fcf9ace130a65622bcd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721825436462
+status: 4
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/d0e16c04eb79461ab2f1648ee2383a16/artifacts
+deleted_time: 1722188940081
+end_time: 1721587532796
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: d0e16c04eb79461ab2f1648ee2383a16
+run_name: judicious-conch-120
+run_uuid: d0e16c04eb79461ab2f1648ee2383a16
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721587488035
+status: 4
+tags: []
+user_id: threeteck

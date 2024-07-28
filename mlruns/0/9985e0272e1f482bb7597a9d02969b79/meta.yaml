@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/9985e0272e1f482bb7597a9d02969b79/artifacts
+deleted_time: 1722188940327
+end_time: 1721573303466
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 9985e0272e1f482bb7597a9d02969b79
+run_name: resilient-boar-256
+run_uuid: 9985e0272e1f482bb7597a9d02969b79
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721573295859
+status: 3
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/492db5f9190749deb9a595d24dbe27b9/artifacts
+deleted_time: 1722188939928
+end_time: 1721590287617
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 492db5f9190749deb9a595d24dbe27b9
+run_name: useful-dog-11
+run_uuid: 492db5f9190749deb9a595d24dbe27b9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721590279501
+status: 3
+tags: []
+user_id: threeteck

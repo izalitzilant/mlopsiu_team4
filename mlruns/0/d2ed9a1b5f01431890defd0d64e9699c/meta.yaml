@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/d2ed9a1b5f01431890defd0d64e9699c/artifacts
+deleted_time: 1722188940269
+end_time: 1721573857055
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: d2ed9a1b5f01431890defd0d64e9699c
+run_name: peaceful-seal-651
+run_uuid: d2ed9a1b5f01431890defd0d64e9699c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721573847424
+status: 4
+tags: []
+user_id: threeteck

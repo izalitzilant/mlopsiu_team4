@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/4d930fde0c1e4a3da54a22de5195e447/artifacts
+deleted_time: 1722188940236
+end_time: 1721574578953
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 4d930fde0c1e4a3da54a22de5195e447
+run_name: incongruous-boar-631
+run_uuid: 4d930fde0c1e4a3da54a22de5195e447
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721574570502
+status: 4
+tags: []
+user_id: threeteck

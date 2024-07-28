@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/5c9c1de39a504661b62c0d7b3d553bd1/artifacts
+deleted_time: 1722188940388
+end_time: 1721487520617
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 5c9c1de39a504661b62c0d7b3d553bd1
+run_name: merciful-mole-627
+run_uuid: 5c9c1de39a504661b62c0d7b3d553bd1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721487488483
+status: 4
+tags: []
+user_id: threeteck

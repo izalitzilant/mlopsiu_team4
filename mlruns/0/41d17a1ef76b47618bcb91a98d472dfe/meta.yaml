@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/41d17a1ef76b47618bcb91a98d472dfe/artifacts
+deleted_time: 1722188940551
+end_time: 1721399003051
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 41d17a1ef76b47618bcb91a98d472dfe
+run_name: bold-hound-996
+run_uuid: 41d17a1ef76b47618bcb91a98d472dfe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721398995971
+status: 4
+tags: []
+user_id: threeteck

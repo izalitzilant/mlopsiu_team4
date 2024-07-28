@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/8058956efc15493ba272ade861e606d6/artifacts
+deleted_time: 1722188939986
+end_time: 1721589897734
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 8058956efc15493ba272ade861e606d6
+run_name: intrigued-fish-843
+run_uuid: 8058956efc15493ba272ade861e606d6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721589886795
+status: 4
+tags: []
+user_id: threeteck

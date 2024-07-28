@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/3be35881c8aa4ed4b7b9510ba403d516/artifacts
+deleted_time: 1722188940236
+end_time: 1721574286039
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 3be35881c8aa4ed4b7b9510ba403d516
+run_name: victorious-ant-66
+run_uuid: 3be35881c8aa4ed4b7b9510ba403d516
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721574243495
+status: 3
+tags: []
+user_id: threeteck

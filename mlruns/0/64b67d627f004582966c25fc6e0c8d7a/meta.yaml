@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/64b67d627f004582966c25fc6e0c8d7a/artifacts
+deleted_time: 1722188939795
+end_time: 1721595477838
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 64b67d627f004582966c25fc6e0c8d7a
+run_name: indecisive-goat-792
+run_uuid: 64b67d627f004582966c25fc6e0c8d7a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721595440042
+status: 3
+tags: []
+user_id: threeteck

@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/8a3bf59627ab43aca454304ad6d4a7f5/artifacts
+deleted_time: 1722188939798
+end_time: 1721595421790
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 8a3bf59627ab43aca454304ad6d4a7f5
+run_name: bouncy-donkey-238
+run_uuid: 8a3bf59627ab43aca454304ad6d4a7f5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721595384597
+status: 3
+tags: []
+user_id: threeteck
