@@ -10,11 +10,11 @@ from data import read_datastore_local, preprocess_data
 from validate_features import validate_features
 
 @step(enable_cache=False)
-def extract_data() -> Tuple[
+def extract_data(version: str) -> Tuple[
     Annotated[pd.DataFrame, ArtifactConfig(name="extracted_data", tags=["data_preparation"])],
     Annotated[str, ArtifactConfig(name="data_version", tags=["data_preparation"])]
 ]:
-    data, version = read_datastore_local()
+    data = read_datastore_local()
     print("Dataset version", version, data.shape)
     return data, version
 
@@ -43,8 +43,8 @@ def load(data: pd.DataFrame, version: str) -> None:
     load_features(data, version)
 
 @pipeline
-def data_preparation_pipeline():
-    data, version = extract_data()
+def data_preparation_pipeline(version: str):
+    data, version = extract_data(version)
     data = transform_data(data)
     data = validate_data(data, version)
     load(data, version)
