@@ -34,16 +34,14 @@ jobs:
 
       - name: Checking out our code
         uses: actions/checkout@v4
-        with:
-          repository: 'Palandr123/MLOps-Project'
         
         # Install a version of Python
       - name: setup python
         uses: actions/setup-python@v5
-        
         # Install this specific version 3.11.0 of Python
         with:
           python-version: '3.11.0'
+          cache: 'pip'
 
       - name: Install poetry
         uses: abatilo/actions-poetry@v2

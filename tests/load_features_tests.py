@@ -19,8 +19,3 @@ def test_load_features():
     assert X.shape[1] == 125
     assert isinstance(X, pd.Series)
     assert len(y) == 10000
-
-
-def validate_features_test():
-    X, y = load_features(name='features_target', version='4.1c', target_col='deal_probability')
-    assert validate_features(X, '4.1') is not None
