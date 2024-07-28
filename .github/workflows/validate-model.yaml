@@ -76,7 +76,7 @@ jobs:
         run: zenml down && zenml up
       
       - name: Prepare Features
-        run: python3.11 src/prepare_data.py --data_version "4.2"
+        run: python3.11 src/prepare_data.py --data-version "4.2"
         
       - name: Run MLFlow server
         run: |
