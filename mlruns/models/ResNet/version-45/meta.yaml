@@ -6,9 +6,9 @@ last_updated_timestamp: 1721606721667
 name: ResNet
 run_id: c865ed87575343ed8ebb5202303480a9
 run_link: null
-source: file:///mnt/c/mlopsiu_team4/mlruns/935815379554470675/c865ed87575343ed8ebb5202303480a9/artifacts/resnet_model
+source: mlflow-artifacts:/935815379554470675/c865ed87575343ed8ebb5202303480a9/artifacts/resnet_model
 status: READY
 status_message: null
-storage_location: file:///mnt/c/mlopsiu_team4/mlruns/935815379554470675/c865ed87575343ed8ebb5202303480a9/artifacts/resnet_model
+storage_location: mlflow-artifacts:/935815379554470675/c865ed87575343ed8ebb5202303480a9/artifacts/resnet_model
 user_id: null
 version: 45

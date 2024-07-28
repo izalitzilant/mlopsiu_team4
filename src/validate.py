@@ -3,7 +3,7 @@ import os
 import pickle
 
 import numpy as np
-from model import load_features 
+from load_features import load_features 
 from sklearn.metrics import mean_squared_error
 
 import giskard
@@ -11,6 +11,8 @@ import mlflow
 import hydra
 from hydra import compose, initialize
 import pandas as pd
+
+mlflow.set_tracking_uri(uri="http://localhost:5000")
 
 def create_giskard_dataset(data_version, cfg):
     target_col = cfg.datasets.target_col

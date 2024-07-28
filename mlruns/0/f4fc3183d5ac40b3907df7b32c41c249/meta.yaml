@@ -1,4 +1,4 @@
-artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/0/f4fc3183d5ac40b3907df7b32c41c249/artifacts
+artifact_uri: mlflow-artifacts:/0/f4fc3183d5ac40b3907df7b32c41c249/artifacts
 deleted_time: 1722188939609
 end_time: 1721606899887
 entry_point_name: ''

@@ -6,9 +6,9 @@ last_updated_timestamp: 1721604798713
 name: MLP
 run_id: ccd6c30b9f8345828a73e1fa0fdaa1c7
 run_link: null
-source: file:///mnt/c/mlopsiu_team4/mlruns/949748790603708211/ccd6c30b9f8345828a73e1fa0fdaa1c7/artifacts/mlp_model
+source: mlflow-artifacts:/949748790603708211/ccd6c30b9f8345828a73e1fa0fdaa1c7/artifacts/mlp_model
 status: READY
 status_message: null
-storage_location: file:///mnt/c/mlopsiu_team4/mlruns/949748790603708211/ccd6c30b9f8345828a73e1fa0fdaa1c7/artifacts/mlp_model
+storage_location: mlflow-artifacts:/949748790603708211/ccd6c30b9f8345828a73e1fa0fdaa1c7/artifacts/mlp_model
 user_id: null
 version: 10

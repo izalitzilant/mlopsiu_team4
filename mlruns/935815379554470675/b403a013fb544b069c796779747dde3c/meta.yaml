@@ -1,4 +1,4 @@
-artifact_uri: file:///mnt/c/mlopsiu_team4/mlruns/935815379554470675/b403a013fb544b069c796779747dde3c/artifacts
+artifact_uri: mlflow-artifacts:/935815379554470675/b403a013fb544b069c796779747dde3c/artifacts
 end_time: 1721606125937
 entry_point_name: ''
 experiment_id: '935815379554470675'

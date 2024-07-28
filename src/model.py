@@ -15,6 +15,8 @@ import matplotlib.pyplot as plt
 
 from models import RMSELoss, WrappedNeuralNetRegressor
 
+mlflow.set_tracking_uri(uri="http://localhost:5000")
+
 def load_features(name, version, target_col):
     client = Client()
     print("Loading features from", name, version)
