@@ -168,6 +168,6 @@ datastore/
 *.out
 *.pid
 airflow.cfg
-mlruns/
 .dvc/
 results/runs/
+multirun/

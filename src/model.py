@@ -13,7 +13,7 @@ from skorch.regressor import NeuralNetRegressor
 from sklearn.model_selection import GridSearchCV
 import matplotlib.pyplot as plt
 
-from models import RMSELoss, WrappedNeuralNetRegressor
+from src.models import RMSELoss, WrappedNeuralNetRegressor
 
 def load_features(name, version, target_col):
     client = Client()
