@@ -83,7 +83,7 @@ def predict(region,
         return "Error: " + response.text
 
     pred = response.json()
-    return pred[0]
+    return f'{pred[0] * 100:.0f}%'
 
 cities = raw_df['city'].unique().tolist()
 regions = raw_df['region'].unique().tolist()
@@ -102,6 +102,8 @@ if not os.path.exists(os.path.join(examples_path, 'log.csv')):
 demo = gr.Interface(
     # The predict function will accept inputs as arguments and return output
     fn=predict,
+
+    title='Avito Advertisement Demand Prediction',
     
     # Here, the arguments in `predict` function
     # will be populated from the values of these input components
@@ -124,7 +126,7 @@ demo = gr.Interface(
     ],
     
     # The outputs here will get the returned value from `predict` function
-    outputs = gr.Text(label="Prediction result"),
+    outputs = gr.Text(label="Deal Probability"),
     
     # This will provide the user with examples to test the API
     examples="data/examples"

@@ -52,6 +52,14 @@ def parse_version(version):
     return major, minor
 
 @hydra.main(config_path="../configs", config_name="main", version_base=None)
+def sample_data_local(cfg: DictConfig = None) -> None:
+    data_path = os.path.join(cfg.paths.root_path, 'data')
+    samples_path = os.path.join(data_path, './samples/')
+    sample_data = pd.read_csv(os.path.join(samples_path, cfg.datasets.sample_filename), parse_dates=["activation_date"])
+
+    return sample_data
+
+@hydra.main(config_path="../configs", config_name="main", version_base=None)
 def sample_data(cfg: DictConfig = None) -> None:
     data_path = os.path.join(cfg.paths.root_path, 'data')
 
