@@ -32,4 +32,6 @@ def main(cfg: DictConfig):
     print('Successfully configured kaggle secrets')
     
 if __name__ == '__main__':
+    shutil.copyfile(os.path.join(os.getcwd(), 'configs', 'kaggle.yaml.sample'),
+                    os.path.join(os.getcwd(), 'configs', 'kaggle.yaml'))
     main()
