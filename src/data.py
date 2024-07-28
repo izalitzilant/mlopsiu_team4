@@ -69,7 +69,7 @@ def sample_data(cfg: DictConfig = None) -> None:
 
     data = pd.read_csv(os.path.join(data_path, 'train.csv'))
 
-    major, idx= parse_version(cfg.datasets.version)
+    major, idx = parse_version(cfg.datasets.version)
     print(f'Dataset version {major}.{idx}')
     
     start_idx = int(cfg.datasets.sample_size) * idx
@@ -111,6 +111,13 @@ def read_datastore() -> Tuple[pd.DataFrame, str]:
         )
 
         data = pd.read_csv(url)
+
+        return data, str(cfg.datasets.version)
+    
+def read_datastore_local() -> Tuple[pd.DataFrame, str]:
+    with initialize(config_path="../configs", job_name="extract_data", version_base=None):
+        cfg = compose(config_name="main")
+        data = sample_data_local(cfg)
 
         return data, str(cfg.datasets.version)
     
