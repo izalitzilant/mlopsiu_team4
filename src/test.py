@@ -10,6 +10,7 @@ import dvc.api
 import zenml
 from zenml import step, pipeline, ArtifactConfig
 from zenml.client import Client
+from load_features import load_features
 
 def read_datastore() -> Tuple[pd.DataFrame, str]:
     initialize(config_path="../configs", job_name="extract_data", version_base=None)
@@ -28,21 +29,13 @@ def read_datastore() -> Tuple[pd.DataFrame, str]:
     return data, str(cfg.datasets.version)
 
 def dup():
-    client = Client()
-    list_of_artifacts = client.list_artifact_versions(name="features_target", tag='4.1c', sort_by="version").items
-    list_of_artifacts.reverse()
+    df1, _ = load_features("features_target", "4.1c", "deal_probability")
+    df2, _ = load_features("features_target", "4.2c", "deal_probability")
 
-    df1 = list_of_artifacts[0].load()
-
-    list_of_artifacts = client.list_artifact_versions(name="features_target", tag='4.2c', sort_by="version").items
-    list_of_artifacts.reverse()
-
-    df2 = list_of_artifacts[0].load()
-
-    print("DF 3.4", df1.shape)
+    print("DF 4.1", df1.shape)
     print(df1.iloc[:5, :5])
     
-    print("\nDF 3.5", df2.shape)
+    print("\nDF 4.2", df2.shape)
     print(df2.iloc[:5, :5])
 
 def get_model_version(model_name, model_alias):

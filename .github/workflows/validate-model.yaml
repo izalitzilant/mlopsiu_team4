@@ -18,11 +18,11 @@ permissions:
   contents: read
 
 env:
-  message: "Running Tests"
+  message: "Validating Model"
 
 jobs:
 
-  test-code:
+  validate-model:
 
     runs-on: ubuntu-latest
 
