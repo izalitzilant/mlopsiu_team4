@@ -82,19 +82,8 @@ def fix_mlartifacts_paths():
 
 @hydra.main(config_path="../configs", config_name="main", version_base=None)
 def main(cfg: DictConfig):
-    fix_mlartifacts_paths()
-    return
-    print(cfg.paths.root_path)
-    print('new_path', os.getcwd())
-
-    new_root_path = os.getcwd()
-
-    print(os.path.join(new_root_path, 'configs', 'paths.yaml'))
-    #OmegaConf.update(cfg, 'datasets.message', f"Added sample data for version {major}.{idx}")
-    #OmegaConf.save({'datasets': cfg.datasets}, os.path.join(cfg.paths.root_path, 'configs', 'datasets.yaml'))
+    dup()
 
     
 if __name__ == '__main__':
     main()
-    #get_model_version("MLP_4", "challenger1")
-    #dup()
