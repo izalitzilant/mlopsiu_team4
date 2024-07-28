@@ -7,7 +7,7 @@ import hydra
 import pytest
 from hydra import compose, initialize
 from omegaconf import DictConfig
-from src.model import load_features
+from src.load_features import load_features
 from src.validate_features import validate_features
 
 
