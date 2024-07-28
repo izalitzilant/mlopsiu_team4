@@ -114,13 +114,11 @@ def read_datastore() -> Tuple[pd.DataFrame, str]:
 
         return data, str(cfg.datasets.version)
     
-def read_datastore_local(version=None) -> Tuple[pd.DataFrame, str]:
+def read_datastore_local() -> Tuple[pd.DataFrame, str]:
     with initialize(config_path="../configs", job_name="extract_data", version_base=None):
         cfg = compose(config_name="main")
         data = sample_data_local(cfg)
-
-        if version is None:
-            version = cfg.datasets.version
+        version = cfg.datasets.version
         return data, version
     
 def load_model(path):
