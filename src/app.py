@@ -15,8 +15,6 @@ def init_hydra():
     return cfg
 
 cfg = init_hydra()
-raw_df, _ = read_datastore()
-raw_df: pd.DataFrame = raw_df
 
 # You need to define a parameter for each column in your raw dataset
 def predict(region,
@@ -85,19 +83,37 @@ def predict(region,
     pred = response.json()
     return f'{pred[0] * 100:.0f}%'
 
-cities = raw_df['city'].unique().tolist()
-regions = raw_df['region'].unique().tolist()
-categories = raw_df['category_name'].unique().tolist()
+
 
 examples_path = os.path.join(cfg.paths.root_path, 'data', 'examples')
-if not os.path.exists(os.path.join(examples_path, 'log.csv')):
+if not os.path.exists(os.path.join(examples_path, 'log.csv')) or\
+                      not os.path.exists(os.path.join(examples_path, 'categories.json')):
+    print('Creating examples')
+    raw_df, _ = read_datastore()
+    raw_df: pd.DataFrame = raw_df
     os.makedirs(examples_path, exist_ok=True)
+    cities = raw_df['city'].unique().tolist()
+    regions = raw_df['region'].unique().tolist()
+    categories = raw_df['category_name'].unique().tolist()
+
+    #Save unique categories
+    with open(os.path.join(examples_path, 'categories.json'), 'w') as f:
+        json.dump(categories, f, ensure_ascii=False)
+    with open(os.path.join(examples_path, 'cities.json'), 'w') as f:
+        json.dump(cities, f, ensure_ascii=False)
+    with open(os.path.join(examples_path, 'regions.json'), 'w') as f:
+        json.dump(regions, f, ensure_ascii=False)
+
     cols = ['region', 'city', 'parent_category_name', 'category_name', 'title', 
                        'description', 'price', 'activation_date', 'user_type', 'item_seq_number', 
                        'param_1', 'param_2', 'param_3']
     raw_df = raw_df.dropna(subset=cols)
     raw_df.sample(10)[cols].to_csv(os.path.join(examples_path, 'log.csv'), index=False, header=False)
     
+regions = json.load(open(os.path.join(examples_path, 'regions.json'), 'r'))
+cities = json.load(open(os.path.join(examples_path, 'cities.json'), 'r'))
+categories = json.load(open(os.path.join(examples_path, 'categories.json'), 'r'))
+
 # Only one interface is enough
 demo = gr.Interface(
     # The predict function will accept inputs as arguments and return output
