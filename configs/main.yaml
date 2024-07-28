@@ -4,14 +4,10 @@ defaults:
   - model/model
   - experiment
   - reproducibility
-
-paths:
-  root_path: /mnt/c/mlopsiu_team4
+  - paths
 
 hydra:
   mode: MULTIRUN
   sweeper:
     params:
       +model: "resnet"
-  run:
-    dir: /mnt/c/mlopsiu_team4/outputs

@@ -29,12 +29,12 @@ def read_datastore() -> Tuple[pd.DataFrame, str]:
 
 def dup():
     client = Client()
-    list_of_artifacts = client.list_artifact_versions(name="features_target", tag='3.4b', sort_by="version").items
+    list_of_artifacts = client.list_artifact_versions(name="features_target", tag='4.1c', sort_by="version").items
     list_of_artifacts.reverse()
 
     df1 = list_of_artifacts[0].load()
 
-    list_of_artifacts = client.list_artifact_versions(name="features_target", tag='3.5b', sort_by="version").items
+    list_of_artifacts = client.list_artifact_versions(name="features_target", tag='4.2c', sort_by="version").items
     list_of_artifacts.reverse()
 
     df2 = list_of_artifacts[0].load()
@@ -59,8 +59,17 @@ def get_model_version(model_name, model_alias):
 
 @hydra.main(config_path="../configs", config_name="main", version_base=None)
 def main(cfg: DictConfig):
-    print(cfg)
-    print(cfg.kek)
+    dup()
+    return
+    print(cfg.paths.root_path)
+    print('new_path', os.getcwd())
+
+    new_root_path = os.getcwd()
+
+    print(os.path.join(new_root_path, 'configs', 'paths.yaml'))
+    #OmegaConf.update(cfg, 'datasets.message', f"Added sample data for version {major}.{idx}")
+    #OmegaConf.save({'datasets': cfg.datasets}, os.path.join(cfg.paths.root_path, 'configs', 'datasets.yaml'))
+
     
 if __name__ == '__main__':
     main()

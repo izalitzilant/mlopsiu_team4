@@ -1,5 +1,5 @@
 kaggle:
   competition_name: avito-demand-prediction
-  key: <kaggle key>
-  username: <kaggle username>
+  key: kaggle_key
+  username: kaggle_username
   force_download: False

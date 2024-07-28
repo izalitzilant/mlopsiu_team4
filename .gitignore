@@ -161,7 +161,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 data/train.csv
-data/samples/sample.csv
 tests/outputs
 configs/kaggle.yaml
 datastore/
@@ -172,4 +171,3 @@ airflow.cfg
 mlruns/
 .dvc/
 results/runs/
-services/zenml/

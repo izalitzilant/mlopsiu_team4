@@ -1,0 +1,84 @@
+name: Running Tests
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - 'services/zenml/**'
+      - 'data/**'
+      - 'tests/**'
+      - 'configs/**'
+      - '.github/**'
+
+permissions:
+  contents: read
+
+env:
+  message: "Running Tests"
+
+jobs:
+
+  test-code:
+
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: .
+
+    steps:
+
+      - name: Checking out our code
+        uses: actions/checkout@v4
+        with:
+          repository: 'Palandr123/MLOps-Project'
+        
+        # Install a version of Python
+      - name: setup python
+        uses: actions/setup-python@v5
+        
+        # Install this specific version 3.11.0 of Python
+        with:
+          python-version: '3.11.0'
+
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v2
+          
+        # Install Python packages  
+      - name: install python packages
+        run: |
+          pip3.11 install -r requirements.txt 
+
+      - name: Prepare Env
+        env:
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+        run: python3.11 scripts/prepare_env.py ++kaggle_key="$KAGGLE_KEY" ++kaggle_username="$KAGGLE_USERNAME"
+      
+      # Task name
+      - name: Run app
+      
+      # A one-line shell command
+      # This will run the application in the background 
+      # It is useful for apps which block the shell
+      # to allow next commands to run
+        run: python3.11 src/app.py &
+      
+      - name: Export variables
+        run: | 
+          echo $PWD
+          export ZENML_CONFIG_PATH=$PWD/services/zenml
+          export PROJECTPATH=$PWD
+          export AIRFLOW_HOME=$PWD/services/airflow
+          export PYTHONPATH=$PWD/src
+
+      - name: Run ZenML server  
+        run: zenml down && zenml up
+        
+      # Run pytest on tests folder    
+      - name: Test with pytest
+        run: pytest tests
